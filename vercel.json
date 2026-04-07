@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/tentang", "destination": "/tentang/index.html" },
+    { "source": "/lpj(.*)", "destination": "/lpj/index.html" },
+    { "source": "/mubes/agenda(.*)", "destination": "/mubes/agenda/index.html" },
+    { "source": "/mubes/tor(.*)", "destination": "/mubes/tor/index.html" },
+    { "source": "/mubes/tartib(.*)", "destination": "/mubes/tartib/index.html" },
+    { "source": "/mubes(.*)", "destination": "/mubes/index.html" },
+    { "source": "/adart(.*)", "destination": "/adart/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

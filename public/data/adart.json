@@ -1,0 +1,994 @@
+{
+  "ad": [
+  {
+    "id": "bab-1",
+    "bab": "BAB I",
+    "title": "KETENTUAN UMUM, NAMA, WAKTU, DAN KEDUDUKAN",
+    "pasal": [
+      {
+        "id": "pasal-1",
+        "nomor": "Pasal 1",
+        "points": [
+          "Ketentuan Umum",
+          "Dalam Anggaran Dasar ini yang dimaksud dengan:",
+          "1. STIE Wikara adalah Sekolah Tinggi Ilmu Ekonomi Wikara Purwakarta, sebuah institusi pendidikan yang berfokus pada keilmuan ekonomi dan bisnis.",
+          "2. Ketua STIE Wikara adalah pimpinan tertinggi institusi akademik STIE Wikara Purwakarta yang memegang otoritas legal-formal kampus.",
+          "3. Ketua Program Studi (Kaprodi) adalah pimpinan akademik pada tingkat program studi (Manajemen dan Akuntansi).",
+          "4. Civitas Academica adalah komunitas akademik yang terdiri atas dosen dan mahasiswa STIE Wikara.",
+          "5. Mahasiswa Aktif adalah mahasiswa yang terdaftar secara administratif, akademik, dan finansial pada semester berjalan di STIE Wikara.",
+          "6. BEM STIE Wikara adalah Badan Eksekutif Mahasiswa tingkat institusi yang merupakan lembaga eksekutif tertinggi di STIE Wikara.",
+          "7. MUBES adalah Musyawarah Besar Mahasiswa STIE Wikara sebagai forum pemegang kekuasaan perundang-undangan dan pengambilan keputusan tertinggi organisasi.",
+          "8. MUSLUB adalah Musyawarah Luar Biasa, yakni forum setingkat MUBES yang diselenggarakan dalam keadaan darurat atau krisis institusional.",
+          "9. GBHO adalah Garis Besar Haluan Organisasi, yakni haluan negara mahasiswa yang memuat pedoman dasar pelaksanaan program kerja BEM.",
+          "10. PEMIRA adalah Pemilihan Umum Raya Mahasiswa, sebuah mekanisme demokratis untuk memilih Ketua BEM dan/atau Wakil Ketua BEM.",
+          "11. HIMAMEN adalah Himpunan Mahasiswa Manajemen, wadah pengembangan keilmuan spesifik bagi mahasiswa Program Studi S1 Manajemen.",
+          "12. HIMAKSI adalah Himpunan Mahasiswa Akuntansi, wadah pengembangan keilmuan spesifik bagi mahasiswa Program Studi S1 Akuntansi.",
+          "13. UKM adalah Unit Kegiatan Mahasiswa, wadah pengembangan minat, bakat, dan keahlian khusus mahasiswa di luar kurikulum akademik.",
+          "14. Demisioner adalah status purna tugas yang diberikan kepada pengurus BEM setelah Laporan Pertanggungjawabannya (LPJ) diterima secara sah dalam MUBES.",
+          "15. Majelis Etik Organisasi (MEO) adalah badan ad-hoc yang dibentuk untuk mengadili, memeriksa, dan memutus sengketa etika atau pelanggaran berat pengurus."
+        ]
+      },
+      {
+        "id": "pasal-2",
+        "nomor": "Pasal 2",
+        "points": [
+          "Nama Organisasi",
+          "1. Organisasi ini bernama Badan Eksekutif Mahasiswa Sekolah Tinggi Ilmu Ekonomi Wikara Purwakarta.",
+          "2. Secara resmi di dalam dokumen hukum, korespondensi, dan administratif disingkat menjadi BEM STIE Wikara."
+        ]
+      },
+      {
+        "id": "pasal-3",
+        "nomor": "Pasal 3",
+        "points": [
+          "Waktu Pendirian",
+          "1. BEM STIE Wikara didirikan di Kabupaten Purwakarta pada tanggal [Diisi tanggal awal berdirinya BEM STIE Wikara].",
+          "2. BEM STIE Wikara didirikan untuk jangka waktu yang tidak ditentukan, selama institusi STIE Wikara masih berdiri, beroperasi, dan diakui oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia."
+        ]
+      },
+      {
+        "id": "pasal-4",
+        "nomor": "Pasal 4",
+        "points": [
+          "Kedudukan dan Garis Komando Tertinggi",
+          "1. BEM STIE Wikara berkedudukan di tingkat Perguruan Tinggi, beralamat di Sekretariat BEM, Kampus Sekolah Tinggi Ilmu Ekonomi Wikara, Kabupaten Purwakarta, Provinsi Jawa Barat.",
+          "2. Secara struktural institusional, BEM STIE Wikara berkedudukan langsung di bawah garis komando, pembinaan, dan pengawasan Ketua STIE Wikara atau Wakil Ketua Bidang Kemahasiswaan yang ditunjuk.",
+          "3. BEM STIE Wikara merupakan satu-satunya wadah perwakilan mahasiswa tingkat perguruan tinggi yang sah dan diakui oleh Statuta STIE Wikara."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-2",
+    "bab": "BAB II",
+    "title": "ASAS, LANDASAN, SIFAT, PRINSIP, DAN ATRIBUT",
+    "pasal": [
+      {
+        "id": "pasal-5",
+        "nomor": "Pasal 5",
+        "points": [
+          "Asas",
+          "BEM STIE Wikara berasaskan:",
+          "1. Ketuhanan Yang Maha Esa.",
+          "2. Kemanusiaan yang Adil dan Beradab.",
+          "3. Kekeluargaan dan Gotong Royong.",
+          "4. Demokrasi Pancasila.",
+          "5. Keadilan Akademik dan Sosial."
+        ]
+      },
+      {
+        "id": "pasal-6",
+        "nomor": "Pasal 6",
+        "points": [
+          "Landasan Organisasi",
+          "BEM STIE Wikara bergerak dan mengambil keputusan berlandaskan pada:",
+          "1. Landasan Idiil: Pancasila.",
+          "2. Landasan Konstitusional: Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.",
+          "3. Landasan Yuridis Negara: Undang-Undang No. 12 Tahun 2012 tentang Pendidikan Tinggi dan Keputusan Menteri Pendidikan dan Kebudayaan (Kepmendikbud) No. 155/U/1998 tentang Pedoman Umum Organisasi Kemahasiswaan.",
+          "4. Landasan Operasional: Tri Dharma Perguruan Tinggi (Pendidikan, Penelitian, dan Pengabdian kepada Masyarakat) serta Statuta STIE Wikara Purwakarta.",
+          "5. Landasan Hukum Organisasi: Anggaran Dasar dan Anggaran Rumah Tangga (AD/ART) BEM STIE Wikara serta Ketetapan MUBES yang sah.",
+          "6. Landasan Sosiologis: Nilai-nilai kearifan lokal masyarakat Jawa Barat (Silih Asah, Silih Asih, Silih Asuh)."
+        ]
+      },
+      {
+        "id": "pasal-7",
+        "nomor": "Pasal 7",
+        "points": [
+          "Sifat Organisasi",
+          "BEM STIE Wikara memiliki sifat dasar yang tidak dapat diganggu gugat:",
+          "1. Independen dan Netral: Bebas dari intervensi partai politik praktis, organisasi masyarakat (ormas) eksternal, organisasi ekstra kampus, maupun golongan kepentingan tertentu di luar civitas academica. BEM STIE Wikara bersikap netral dan tidak menjadi perpanjangan tangan organisasi eksternal mana pun.",
+          "2. Demokratis: Segala proses pemilihan dan pengambilan keputusan strategis dilakukan dari, oleh, dan untuk mahasiswa berdasarkan prinsip musyawarah untuk mufakat.",
+          "3. Egaliter: Mengakui kesetaraan hak dan kewajiban seluruh mahasiswa tanpa memandang suku, agama, ras, antargolongan (SARA), maupun status sosial.",
+          "4. Intelektual dan Profesional: Bergerak berdasarkan kajian keilmuan ekonomi, etika akademik, dan tata kelola administrasi yang modern dan terukur.",
+          "5. Transparan dan Akuntabel: Terbuka dalam pengelolaan anggaran dan kebijakan, serta dapat dipertanggungjawabkan secara rasional dan hukum."
+        ]
+      },
+      {
+        "id": "pasal-8",
+        "nomor": "Pasal 8",
+        "points": [
+          "Prinsip Pergerakan Mahasiswa",
+          "Dalam menjalankan fungsinya, BEM STIE Wikara memegang teguh prinsip pergerakan:",
+          "1. Agent of Change (Agen Perubahan): Menjadi pelopor inovasi dan perbaikan di lingkungan kampus maupun masyarakat.",
+          "2. Social Control (Kontrol Sosial): Mengawasi dan memberikan kritik konstruktif terhadap kebijakan kampus maupun pemerintah yang dinilai merugikan masyarakat.",
+          "3. Moral Force (Kekuatan Moral): Menjunjung tinggi etika, moralitas, dan kebenaran ilmiah dalam setiap tindakan.",
+          "4. Iron Stock (Generasi Penerus): Mempersiapkan kader-kader pemimpin masa depan yang tangguh dan berintegritas."
+        ]
+      },
+      {
+        "id": "pasal-9",
+        "nomor": "Pasal 9",
+        "points": [
+          "Atribut Organisasi",
+          "1. BEM STIE Wikara memiliki atribut resmi yang sah, diakui, dan dilindungi secara kelembagaan.",
+          "2. Atribut sebagaimana dimaksud pada ayat (1) terdiri dari Lambang/Logo, Bendera, Stempel, Kop Surat, dan Pakaian Dinas Harian (PDH) / Jas Almamater.",
+          "3. Bentuk, ukuran, warna, makna filosofis, dan tata cara penggunaan atribut organisasi diatur secara rinci, spesifik, dan mengikat di dalam Anggaran Rumah Tangga (ART)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-3",
+    "bab": "BAB III",
+    "title": "VISI, MISI, TUJUAN, DAN NILAI DASAR",
+    "pasal": [
+      {
+        "id": "pasal-10",
+        "nomor": "Pasal 10",
+        "points": [
+          "Visi Organisasi",
+          "Mewujudkan BEM STIE Wikara sebagai lembaga eksekutif yang progresif, inklusif, transparan, dan berdaya saing tinggi dalam mengoptimalkan potensi mahasiswa di bidang akademik, kepemimpinan, dan pengabdian masyarakat, berlandaskan keilmuan ekonomi dan manajerial."
+        ]
+      },
+      {
+        "id": "pasal-11",
+        "nomor": "Pasal 11",
+        "points": [
+          "Misi Organisasi",
+          "Untuk mencapai visi sebagaimana diatur dalam Pasal 10, BEM STIE Wikara mengemban misi:",
+          "1. Menyelenggarakan tata kelola organisasi yang transparan, akuntabel, dan profesional berbasis Good Student Governance.",
+          "2. Membangun sinergi, harmonisasi, dan garis komando yang terstruktur dengan Himpunan Mahasiswa (HIMAMEN dan HIMAKSI), Unit Kegiatan Mahasiswa (UKM), serta pihak Pimpinan STIE Wikara.",
+          "3. Menjadi wadah advokasi yang responsif, solutif, dan berani dalam memperjuangkan hak, kesejahteraan, serta aspirasi mahasiswa.",
+          "4. Menyelenggarakan program kerja yang berorientasi pada peningkatan soft skill, hard skill, dan kepedulian sosial mahasiswa secara berkelanjutan.",
+          "5. Memperluas jaringan (networking) dan kemitraan strategis dengan pihak eksternal (pemerintah, swasta, dan perguruan tinggi lain) guna mendukung pengembangan karir mahasiswa.",
+          "6. Menumbuhkembangkan jiwa kewirausahaan (entrepreneurship) di kalangan mahasiswa STIE Wikara."
+        ]
+      },
+      {
+        "id": "pasal-12",
+        "nomor": "Pasal 12",
+        "points": [
+          "Tujuan Organisasi",
+          "BEM STIE Wikara bertujuan untuk:",
+          "1. Membentuk mahasiswa STIE Wikara yang bertakwa kepada Tuhan YME dan memiliki integritas moral yang tinggi.",
+          "2. Menciptakan iklim akademik yang kondusif, dinamis, dan kompetitif.",
+          "3. Melahirkan lulusan yang berwawasan intelektual luas, kritis, serta mampu memberikan kontribusi nyata bagi masyarakat melalui implementasi ilmu manajemen dan akuntansi secara profesional.",
+          "4. Menjaga dan mengangkat muruah serta nama baik almamater STIE Wikara di tingkat regional, nasional, maupun internasional."
+        ]
+      },
+      {
+        "id": "pasal-13",
+        "nomor": "Pasal 13",
+        "points": [
+          "Nilai-Nilai Dasar (Core Values)",
+          "Setiap fungsionaris BEM STIE Wikara wajib menginternalisasi nilai-nilai dasar:",
+          "1. Integritas: Keselarasan antara pikiran, perkataan, dan perbuatan yang berlandaskan kebenaran.",
+          "2. Sinergi: Kolaborasi yang harmonis untuk mencapai tujuan bersama.",
+          "3. Inovasi: Keberanian untuk menciptakan gagasan baru yang solutif dan relevan dengan perkembangan zaman.",
+          "4. Dedikasi: Pengabdian tanpa pamrih untuk kemajuan mahasiswa dan almamater."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-4",
+    "bab": "BAB IV",
+    "title": "FUNGSI, PERAN, DAN WEWENANG",
+    "pasal": [
+      {
+        "id": "pasal-14",
+        "nomor": "Pasal 14",
+        "points": [
+          "Fungsi Organisasi",
+          "BEM STIE Wikara berfungsi sebagai:",
+          "1. Lembaga eksekutif sentral dan tertinggi di tingkat mahasiswa STIE Wikara.",
+          "2. Perencana, pelaksana, pengawas, pengevaluasi, dan koordinator seluruh garis-garis besar program kemahasiswaan tingkat perguruan tinggi.",
+          "3. Representasi resmi mahasiswa STIE Wikara dalam forum-forum internal maupun eksternal kampus."
+        ]
+      },
+      {
+        "id": "pasal-15",
+        "nomor": "Pasal 15",
+        "points": [
+          "Peran Organisasi",
+          "1. Peran Advokasi: Menjembatani, mengawal, dan memperjuangkan kepentingan serta hak-hak mahasiswa kepada pimpinan kampus secara diplomatis dan taktis.",
+          "2. Peran Pelayanan dan Pembinaan: Menyediakan fasilitas, regulasi, dan ruang pengembangan minat, bakat, serta keilmuan mahasiswa melalui pembinaan HIMA dan UKM.",
+          "3. Peran Katalisator: Mendorong terciptanya iklim akademik yang kritis, dinamis, dan solutif terhadap isu-isu ekonomi lokal maupun nasional.",
+          "4. Peran Eksekutor: Melaksanakan Ketetapan MUBES dan merealisasikan program kerja yang telah disahkan secara bertanggung jawab."
+        ]
+      },
+      {
+        "id": "pasal-16",
+        "nomor": "Pasal 16",
+        "points": [
+          "Wewenang Organisasi",
+          "BEM STIE Wikara memiliki wewenang absolut untuk:",
+          "1. Membuat, menetapkan, dan mengesahkan peraturan turunan organisasi (Peraturan BEM, SOP, SK Ketua BEM) yang tidak bertentangan dengan AD/ART.",
+          "2. Mengoordinasikan, mengawasi, dan mengevaluasi kinerja HIMAMEN, HIMAKSI, dan seluruh UKM di lingkungan STIE Wikara.",
+          "3. Mengelola, mengalokasikan, dan mempertanggungjawabkan dana kemahasiswaan yang diamanatkan kepada BEM.",
+          "4. Mewakili mahasiswa STIE Wikara dalam penandatanganan nota kesepahaman (MoU) dengan pihak eksternal, atas sepengetahuan Ketua STIE Wikara."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-5",
+    "bab": "BAB V",
+    "title": "KEANGGOTAAN",
+    "pasal": [
+      {
+        "id": "pasal-17",
+        "nomor": "Pasal 17",
+        "points": [
+          "Status dan Klasifikasi Anggota",
+          "Anggota BEM STIE Wikara diklasifikasikan menjadi 3 (tiga) kategori utama:",
+          "1. Anggota Biasa: Seluruh mahasiswa aktif Program Studi S1 Manajemen dan S1 Akuntansi yang terdaftar secara administratif dan sah di STIE Wikara Purwakarta.",
+          "2. Anggota Aktif (Pengurus): Mahasiswa aktif yang telah melewati proses seleksi, dipilih, secara sah dilantik, dan mengemban jabatan struktural dalam kepengurusan BEM STIE Wikara.",
+          "3. Anggota Kehormatan: Demisioner pengurus BEM STIE Wikara atau pihak-pihak eksternal/internal yang dianggap telah memberikan kontribusi luar biasa bagi kemajuan organisasi, yang ditetapkan melalui Surat Keputusan (SK) Ketua BEM."
+        ]
+      },
+      {
+        "id": "pasal-18",
+        "nomor": "Pasal 18",
+        "points": [
+          "Syarat Keanggotaan",
+          "1. Syarat mutlak menjadi Anggota Biasa adalah berstatus sebagai mahasiswa aktif STIE Wikara.",
+          "2. Syarat menjadi Anggota Aktif (Pengurus) diatur lebih lanjut dan rinci dalam Anggaran Rumah Tangga (ART).",
+          "3. Keanggotaan bersifat mengikat secara otomatis bagi seluruh mahasiswa aktif (stelsel pasif) untuk Anggota Biasa, dan bersifat sukarela melalui rekrutmen (stelsel aktif) untuk Anggota Aktif (Pengurus)."
+        ]
+      },
+      {
+        "id": "pasal-19",
+        "nomor": "Pasal 19",
+        "points": [
+          "Hak Anggota",
+          "1. Hak Anggota Biasa:",
+          "a. Hak mengeluarkan pendapat secara lisan maupun tulisan.",
+          "b. Hak memberikan aspirasi dan kritik yang membangun.",
+          "c. Hak mengikuti seluruh kegiatan kemahasiswaan yang diselenggarakan BEM.",
+          "d. Hak memilih (Hak Suara) dalam Pemilihan.",
+          "e. Hak dipilih (menjadi pengurus/Ketua BEM) apabila memenuhi syarat konstitusional.",
+          "2. Hak Anggota Aktif (Pengurus):",
+          "a. Memiliki seluruh hak Anggota Biasa.",
+          "b. Hak suara penuh dalam rapat-rapat internal BEM.",
+          "c. Hak menggunakan atribut dan fasilitas organisasi sesuai peruntukannya.",
+          "d. Hak merumuskan, mengusulkan, dan mengeksekusi kebijakan organisasi.",
+          "e. Hak membela diri di hadapan Majelis Etik Organisasi (MEO) apabila dikenakan sanksi.",
+          "3. Hak Anggota Kehormatan:",
+          "a. Hak bicara (memberikan saran, kritik, atau nasihat) dalam forum-forum tertentu.",
+          "b. Tidak memiliki hak suara dalam pengambilan keputusan (voting) maupun hak dipilih."
+        ]
+      },
+      {
+        "id": "pasal-20",
+        "nomor": "Pasal 20",
+        "points": [
+          "Kewajiban Anggota",
+          "1. Menjaga nama baik, kehormatan, dan muruah almamater STIE Wikara serta BEM STIE Wikara di dalam maupun di luar kampus.",
+          "2. Mematuhi, tunduk, dan menjunjung tinggi AD/ART, Ketetapan MUBES, serta peraturan organisasi lainnya tanpa pengecualian.",
+          "3. Berpartisipasi aktif, mendukung penuh, dan menyukseskan program kerja yang diselenggarakan oleh BEM STIE Wikara.",
+          "4. Menjaga dan memelihara aset, inventaris, serta fasilitas milik organisasi dan kampus.",
+          "5. Menjaga netralitas organisasi dengan tidak membawa, mempromosikan, atau menyebarkan pengaruh, kepentingan, serta ideologi dari organisasi eksternal (termasuk ormas, partai politik, dan organisasi ekstra kampus) ke dalam lingkungan BEM maupun kampus STIE Wikara."
+        ]
+      },
+      {
+        "id": "pasal-21",
+        "nomor": "Pasal 21",
+        "points": [
+          "Gugurnya Status Keanggotaan",
+          "Status keanggotaan (baik Anggota Biasa maupun Anggota Aktif) dinyatakan gugur secara hukum apabila:",
+          "1. Meninggal dunia.",
+          "2. Lulus studi (Yudisium/Wisuda) dari STIE Wikara.",
+          "3. Mengundurkan diri secara resmi dari STIE Wikara (Pindah Kampus).",
+          "4. Diberhentikan secara tidak hormat (Drop Out) oleh pihak institusi STIE Wikara.",
+          "5. Khusus bagi Anggota Aktif (Pengurus), statusnya dapat gugur jika mengundurkan diri secara tertulis, diberhentikan melalui kesepakatan forum atas rekomendasi Ketua BEM, atau dipecat melalui mekanisme Majelis Etik Organisasi."
+        ]
+      },
+      {
+        "id": "pasal-22",
+        "nomor": "Pasal 22",
+        "points": [
+          "Hak Pembelaan Anggota",
+          "1. Setiap anggota yang dituduh melakukan pelanggaran AD/ART berhak mendapatkan praduga tak bersalah.",
+          "2. Setiap anggota berhak melakukan pembelaan diri secara lisan maupun tulisan sebelum sanksi definitif dijatuhkan oleh organisasi."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-6",
+    "bab": "BAB VI",
+    "title": "HIERARKI PERATURAN DAN HUBUNGAN KELEMBAGAAN",
+    "pasal": [
+      {
+        "id": "pasal-23",
+        "nomor": "Pasal 23",
+        "points": [
+          "Hierarki Peraturan Organisasi",
+          "Tata urutan peraturan perundang-undangan di tingkat mahasiswa STIE Wikara bersifat mengikat ke bawah (Lex superior derogat legi inferiori), dengan urutan:",
+          "1. Anggaran Dasar (AD) BEM STIE Wikara.",
+          "2. Anggaran Rumah Tangga (ART) BEM STIE Wikara.",
+          "3. Ketetapan Musyawarah Besar (TAP MUBES).",
+          "4. Undang-Undang Pemilihan.",
+          "5. Surat Keputusan (SK) Ketua BEM.",
+          "6. Standar Operasional Prosedur (SOP) / Peraturan Kementerian BEM."
+        ]
+      },
+      {
+        "id": "pasal-24",
+        "nomor": "Pasal 24",
+        "points": [
+          "Struktur Hierarki dan Hubungan Kelembagaan Internal",
+          "Guna memastikan tata kelola yang tertib, hubungan kelembagaan diatur secara tegas sebagai berikut:",
+          "1. Kedudukan BEM: BEM STIE Wikara adalah lembaga eksekutif tertinggi mahasiswa yang berada di bawah langsung Ketua STIE Wikara.",
+          "2. Kedudukan Himpunan Mahasiswa (HIMA):",
+          "a. HIMAMEN adalah organisasi kemahasiswaan yang berfokus pada pengembangan disiplin ilmu Manajemen.",
+          "b. HIMAKSI adalah organisasi kemahasiswaan yang berfokus pada pengembangan disiplin ilmu Akuntansi.",
+          "c. HIMAMEN dan HIMAKSI berada di bawah komando langsung BEM STIE Wikara.",
+          "d. Dalam menjalankan program kerja yang berkaitan dengan ranah akademik dan keilmuan prodi, HIMAMEN dan HIMAKSI memiliki kewajiban mandatori untuk berkoordinasi dengan Ketua Program Studi (Kaprodi) masing-masing.",
+          "3. Kedudukan Unit Kegiatan Mahasiswa (UKM):",
+          "a. UKM adalah lembaga pelaksana kegiatan peminatan khusus (seni, olahraga, kerohanian, dll).",
+          "b. Seluruh UKM berada di bawah naungan dan pengawasan langsung BEM STIE Wikara.",
+          "c. Untuk memastikan keselarasan program UKM dengan visi besar BEM, setiap UKM wajib memiliki Penanggung Jawab (PJ).",
+          "d. Penanggung Jawab (PJ) UKM adalah Staf Menteri BEM yang didelegasikan secara resmi oleh Kementerian terkait melalui Surat Tugas dari Ketua BEM. PJ bertugas sebagai pengawas, fasilitator, dan penghubung antara UKM dan BEM."
+        ]
+      },
+      {
+        "id": "pasal-25",
+        "nomor": "Pasal 25",
+        "points": [
+          "Hubungan Kelembagaan Eksternal",
+          "1. BEM STIE Wikara dapat menjalin hubungan kerja sama, aliansi, atau keanggotaan dengan organisasi mahasiswa di luar kampus (BEM Nusantara, BEM SI, dll) selama tidak berafiliasi dengan partai politik dan tidak membawa kepentingan organisasi ekstra kampus ke dalam internal BEM.",
+          "2. Keputusan untuk bergabung atau keluar dari aliansi eksternal harus diputuskan melalui Rapat Pleno BEM dan disahkan oleh Ketua BEM.",
+          "3. BEM STIE Wikara berhak menjalin kemitraan dengan instansi pemerintah, swasta, dan LSM guna mendukung pelaksanaan Tri Dharma Perguruan Tinggi."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-7",
+    "bab": "BAB VII",
+    "title": "KEPENGURUSAN DAN KEKUASAAN EKSEKUTIF",
+    "pasal": [
+      {
+        "id": "pasal-26",
+        "nomor": "Pasal 26",
+        "points": [
+          "Struktur Inti",
+          "1. Pimpinan tertinggi BEM STIE Wikara disebut Ketua BEM, yang didampingi oleh Wakil Ketua BEM.",
+          "2. Ketua dan Wakil Ketua BEM bersama dengan Sekretaris dan Bendahara membentuk Badan Pengurus Harian (BPH) yang menjadi motor penggerak utama organisasi.",
+          "3. BPH dibantu oleh Kementerian-Kementerian yang dipimpin oleh seorang Menteri dan jajaran Staf Menteri."
+        ]
+      },
+      {
+        "id": "pasal-27",
+        "nomor": "Pasal 27",
+        "points": [
+          "Kekuasaan Eksekutif",
+          "1. Kekuasaan eksekutif tertinggi berada di tangan Ketua BEM.",
+          "2. Ketua BEM memiliki Hak Prerogatif untuk membentuk kabinet, menentukan nomenklatur kementerian, serta mengangkat dan memberhentikan Menteri dan Staf Menteri (Hak Reshuffle).",
+          "3. Dalam menjalankan kekuasaannya, Ketua BEM tidak boleh bertentangan dengan AD/ART dan GBHO yang ditetapkan oleh MUBES."
+        ]
+      },
+      {
+        "id": "pasal-28",
+        "nomor": "Pasal 28",
+        "points": [
+          "Masa Jabatan",
+          "1. Masa jabatan kepengurusan BEM STIE Wikara adalah 1 (satu) periode yang totalnya berlangsung selama 12 (dua belas) bulan, dengan pembagian:",
+          "a. 9 (Sembilan) Bulan Masa Penuh: Masa aktif pelaksanaan program kerja dan roda organisasi oleh pengurus definitif.",
+          "b. 3 (Tiga) Bulan Masa Kekosongan/Transisi: Masa di mana kepemimpinan digantikan sementara oleh Penanggung Jawab (PJ), sementara pengurus sebelumnya bertugas menyiapkan Musyawarah Besar (MUBES), Laporan Pertanggungjawaban (LPJ), serta mengawal transisi kepengurusan baru termasuk proses pemilihan.",
+          "2. Ketua BEM yang telah habis masa jabatannya TIDAK DAPAT dicalonkan kembali untuk periode berikutnya guna menjamin regenerasi kepemimpinan yang sehat, dinamis, dan anti-otoritarianisme.",
+          "3. Wakil Ketua BEM, Sekretaris, Bendahara, dan Menteri dapat dicalonkan kembali pada periode berikutnya, baik pada posisi yang sama maupun posisi yang berbeda, termasuk mencalonkan diri sebagai Ketua BEM."
+        ]
+      },
+      {
+        "id": "pasal-29",
+        "nomor": "Pasal 29",
+        "points": [
+          "Syarat Mutlak Pimpinan (Ketua & Wakil Ketua BEM)",
+          "Untuk dapat mendaftarkan diri dan dipilih sebagai Ketua dan Wakil Ketua BEM, calon wajib memenuhi persyaratan konstitusional yang mendasar dan ketat berikut:",
+          "1. Mahasiswa aktif STIE Wikara minimal semester 3 dan maksimal semester 5 pada saat pendaftaran.",
+          "2. Telah mengikuti dan lulus Pengenalan Kehidupan Kampus bagi Mahasiswa Baru (PKKMB) serta Masa Bimbingan Mahasiswa (MABIM), dibuktikan dengan sertifikat.",
+          "3. Memiliki Indeks Prestasi Kumulatif (IPK) minimal 3.00 (Skala 4.00) yang dibuktikan dengan transkrip nilai terakhir.",
+          "4. Telah lulus Latihan Kepemimpinan Tingkat Dasar/Lanjut yang diakui oleh kampus.",
+          "5. Netralitas Politik: Tidak berafiliasi, tidak menjadi anggota, dan tidak menjadi pengurus partai politik mana pun, yang dibuktikan secara mutlak dengan tidak terdaftarnya nama calon di dalam Sistem Informasi Partai Politik (SIPOL/SISPOL) milik KPU.",
+          "6. Netralitas Organisasi Eksternal: Tidak sedang menjabat sebagai pengurus inti (Ketua/Wakil/Sekretaris/Bendahara) di HIMA, UKM, organisasi masyarakat (ormas), atau organisasi ekstra kampus. Apabila terpilih, wajib melepaskan seluruh jabatan di organisasi eksternal maupun internal lainnya untuk menjamin fokus dan netralitas penuh selama menjabat.",
+          "7. Tidak pernah membawa, mempromosikan, atau menyebarkan pengaruh serta atribut organisasi eksternal ke dalam lingkungan kampus STIE Wikara.",
+          "8. Tidak pernah dijatuhi sanksi akademik berat, sanksi etik kampus, atau memiliki catatan kriminal dari pihak berwajib (dibuktikan dengan Surat Keterangan Catatan Kepolisian/SKCK atau surat keterangan bersih diri dari kampus).",
+          "9. Sehat secara jasmani dan rohani, serta bebas dari penyalahgunaan Narkotika, Psikotropika, dan Zat Adiktif lainnya (NAPZA).",
+          "10. Memiliki visi, misi, dan rancangan program kerja yang jelas, tertulis, dan selaras dengan Tri Dharma Perguruan Tinggi."
+        ]
+      },
+      {
+        "id": "pasal-30",
+        "nomor": "Pasal 30",
+        "points": [
+          "Sumpah dan Janji Jabatan",
+          "Sebelum memangku jabatannya, Ketua BEM, Wakil Ketua BEM, dan seluruh jajaran pengurus wajib mengucapkan Sumpah/Janji Jabatan di hadapan Ketua STIE Wikara atau perwakilannya, yang lafalnya diatur secara khusus dalam ART."
+        ]
+      },
+      {
+        "id": "pasal-31",
+        "nomor": "Pasal 31",
+        "points": [
+          "Pengangkatan dan Pemberhentian",
+          "1. Ketua dan Wakil Ketua BEM diangkat secara sah mutlak berdasarkan hasil pemilihan yang disepakati.",
+          "2. Ketua dan Wakil Ketua BEM diberhentikan oleh forum MUBES apabila masa jabatannya berakhir secara normal setelah Laporan Pertanggungjawaban (LPJ) diterima.",
+          "3. Pemberhentian di tengah masa jabatan (pemakzulan) hanya dapat dilakukan melalui Musyawarah Luar Biasa (MUSLUB) jika terbukti secara sah dan meyakinkan melanggar AD/ART, mencemarkan nama baik kampus, melakukan tindak pidana, atau tidak mampu menjalankan tugas secara permanen (berhalangan tetap)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-8",
+    "bab": "BAB VIII",
+    "title": "MEKANISME PEMILIHAN",
+    "pasal": [
+      {
+        "id": "pasal-32",
+        "nomor": "Pasal 32",
+        "points": [
+          "Prinsip dan Mekanisme Pemilihan",
+          "1. Pemilihan Ketua dan Wakil Ketua BEM untuk periode selanjutnya dapat dilaksanakan melalui 3 (tiga) mekanisme yang sah:",
+          "a. PEMIRA (Pemilihan Umum Raya): Mekanisme utama yang melibatkan seluruh mahasiswa aktif STIE Wikara secara demokratis.",
+          "b. AKLAMASI: Ditetapkan secara langsung apabila hanya terdapat 1 (satu) pasangan calon yang mendaftar dan memenuhi syarat hingga batas waktu yang ditentukan.",
+          "c. Musyawarah Besar (MUBES): Pemilihan dilakukan di dalam forum MUBES apabila disepakati oleh forum karena kondisi tertentu yang tidak memungkinkan digelarnya PEMIRA.",
+          "2. Pemilihan berasaskan LUBER JURDIL (Langsung, Umum, Bebas, Rahasia, Jujur, dan Adil).",
+          "3. Setiap mahasiswa aktif STIE Wikara memiliki hak 1 (satu) suara yang tidak dapat diwakilkan (One Man One Vote) dalam mekanisme PEMIRA."
+        ]
+      },
+      {
+        "id": "pasal-33",
+        "nomor": "Pasal 33",
+        "points": [
+          "Penyelenggara dan Pengawas Pemilihan",
+          "1. Pemilihan diselenggarakan oleh Komisi Pemilihan Umum Mahasiswa (KPUM) yang bersifat independen, netral, dan imparsial.",
+          "2. KPUM dibentuk selambat-lambatnya 2 (dua) bulan sebelum masa kepengurusan BEM berakhir melalui SK Ketua BEM atas persetujuan forum pleno.",
+          "3. Pengawasan Pemilihan dilakukan oleh Panitia Pengawas Pemilu (Panwaslu) Mahasiswa untuk menjamin transparansi, mencegah kecurangan, dan menindak pelanggaran kampanye.",
+          "4. Anggota KPUM dan Panwaslu tidak boleh berasal dari calon kandidat atau tim sukses kandidat mana pun."
+        ]
+      },
+      {
+        "id": "pasal-34",
+        "nomor": "Pasal 34",
+        "points": [
+          "Penyelesaian Sengketa Pemilihan",
+          "1. Apabila terjadi perselisihan atau sengketa hasil Pemilihan, penyelesaiannya dilakukan melalui sidang sengketa yang difasilitasi oleh Panwaslu Mahasiswa.",
+          "2. Keputusan sidang sengketa Pemilihan bersifat final dan mengikat."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-9",
+    "bab": "BAB IX",
+    "title": "PERMUSYAWARATAN DAN PENGAMBILAN KEPUTUSAN",
+    "pasal": [
+      {
+        "id": "pasal-35",
+        "nomor": "Pasal 35",
+        "points": [
+          "Jenis Forum Permusyawaratan",
+          "Forum pengambilan keputusan dalam organisasi diurutkan berdasarkan hierarki kekuasaan, dengan penjelasan mendetail sebagai berikut:",
+          "1. Musyawarah Besar (MUBES) : Merupakan forum kekuasaan legislatif dan evaluatif tertinggi mahasiswa STIE Wikara yang diselenggarakan 1 (satu) kali di akhir periode kepengurusan. Forum ini berwenang penuh untuk meminta dan mengevaluasi Laporan Pertanggungjawaban (LPJ), menetapkan atau mengamandemen AD/ART, merumuskan Garis Besar Haluan Organisasi (GBHO), serta mengesahkan pimpinan baru.",
+          "2. Musyawarah Luar Biasa (MUSLUB) : Merupakan forum yang memiliki kedudukan dan wewenang setara dengan MUBES, namun hanya diselenggarakan dalam keadaan darurat atau krisis institusional yang mendesak. Kondisi ini meliputi pemakzulan Ketua/Wakil Ketua BEM, kekosongan jabatan pimpinan secara bersamaan, atau usulan pembubaran organisasi.",
+          "3. Sidang Istimewa : Merupakan forum peradilan etik khusus yang diselenggarakan oleh Majelis Etik Organisasi (MEO). Forum ini bertujuan untuk memeriksa, mengadili, dan memutus sengketa atau dugaan pelanggaran berat yang dilakukan oleh pengurus BEM, dengan wewenang menjatuhkan sanksi administratif hingga Pemberhentian Tidak Dengan Hormat (PTDH).",
+          "4. Rapat Kerja (Raker) : Merupakan forum musyawarah operasional tertinggi yang diselenggarakan pada awal masa kepengurusan. Forum ini bertujuan untuk memaparkan, membedah, merevisi, dan mengesahkan seluruh rancangan program kerja (Proker) kementerian, timeline kegiatan, serta Rencana Anggaran Pendapatan dan Belanja Organisasi (RAPBO) selama satu periode.",
+          "5. Rapat Pleno : Merupakan forum evaluasi manajerial dan operasional yang diselenggarakan secara berkala (minimal per kuartal). Forum ini melibatkan seluruh pengurus BEM, serta perwakilan HIMA dan UKM, untuk mengevaluasi realisasi program kerja, serapan anggaran, Key Performance Indicator (KPI) pengurus, dan sinkronisasi pergerakan kelembagaan.",
+          "6. Rapat Terpimpin : Merupakan forum koordinasi dan konsolidasi akbar yang dipimpin langsung oleh BEM STIE Wikara dengan melibatkan seluruh pimpinan Organisasi Mahasiswa (HIMA dan UKM). Forum ini bertujuan untuk menyelaraskan visi, kalender kegiatan agar tidak tumpang tindih, serta merespons isu-isu strategis di tingkat kampus maupun nasional.",
+          "7. Rapat Darurat: Merupakan forum insidental yang diselenggarakan secara mendadak tanpa memerlukan undangan formal H-2. Forum ini diinisiasi untuk merespons kondisi krisis, mendesak, atau force majeure (seperti bencana alam, konflik fisik, atau ancaman terhadap mahasiswa) yang membutuhkan keputusan taktis dan strategis dari organisasi dalam waktu kurang dari 24 jam."
+        ]
+      },
+      {
+        "id": "pasal-36",
+        "nomor": "Pasal 36",
+        "points": [
+          "Kedudukan dan Wewenang MUBES",
+          "MUBES adalah forum kekuasaan legislatif dan evaluatif tertinggi mahasiswa STIE Wikara yang diselenggarakan 1 (satu) kali di akhir periode, dengan wewenang absolut untuk:",
+          "1. Meminta, mengevaluasi secara kritis, menerima, atau menolak Laporan Pertanggungjawaban (LPJ) Ketua BEM di akhir periode.",
+          "2. Menetapkan dan/atau mengamandemen AD/ART.",
+          "3. Menetapkan Garis Besar Haluan Organisasi (GBHO).",
+          "4. Menetapkan status demisioner kepengurusan BEM STIE Wikara.",
+          "5. Mengesahkan hasil Pemilihan secara seremonial dan legal-formal."
+        ]
+      },
+      {
+        "id": "pasal-37",
+        "nomor": "Pasal 37",
+        "points": [
+          "Kedudukan dan Wewenang MUSLUB",
+          "1. MUSLUB memiliki kedudukan dan wewenang yang setara dengan MUBES.",
+          "2. MUSLUB hanya dapat diselenggarakan dalam keadaan darurat atau krisis institusional, seperti:",
+          "a. Pemakzulan Ketua dan/atau Wakil Ketua BEM.",
+          "b. Kekosongan jabatan Ketua dan Wakil Ketua BEM secara bersamaan.",
+          "c. Usulan pembubaran organisasi.",
+          "3. Syarat penyelenggaraan MUSLUB diatur lebih lanjut dalam ART."
+        ]
+      },
+      {
+        "id": "pasal-38",
+        "nomor": "Pasal 38",
+        "points": [
+          "Sidang Istimewa",
+          "Sidang Istimewa adalah forum khusus yang diselenggarakan oleh Majelis Etik Organisasi (MEO) untuk mengadili pelanggaran berat yang dilakukan oleh pengurus BEM, dengan wewenang menjatuhkan sanksi hingga pemecatan (Pemberhentian Tidak Dengan Hormat)."
+        ]
+      },
+      {
+        "id": "pasal-39",
+        "nomor": "Pasal 39",
+        "points": [
+          "Kuorum dan Pengambilan Keputusan",
+          "1. MUBES dan MUSLUB dinyatakan sah (memenuhi kuorum) apabila dihadiri oleh sekurang-kurangnya 1/2 (satu per dua) ditambah 1 dari total Peserta Penuh yang terdaftar secara administratif oleh panitia.",
+          "2. Apabila kuorum tidak tercapai, sidang ditunda 2x15 menit. Jika masih tidak tercapai, sidang ditunda 1x24 jam, dan setelahnya sidang dinyatakan sah tanpa memperhatikan kuorum.",
+          "3. Pengambilan keputusan pada dasarnya dilakukan secara Musyawarah untuk Mufakat.",
+          "4. Apabila mufakat tidak tercapai setelah dilakukan lobbying (penundaan sidang sementara maksimal 2x15 menit), maka keputusan diambil berdasarkan suara terbanyak (Voting), yakni disetujui oleh sekurang-kurangnya 1/2 (satu per dua) ditambah 1 dari peserta penuh yang hadir."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-10",
+    "bab": "BAB X",
+    "title": "KEUANGAN, HARTA BENDA, DAN ASET",
+    "pasal": [
+      {
+        "id": "pasal-40",
+        "nomor": "Pasal 40",
+        "points": [
+          "Sumber Pendanaan",
+          "Keuangan BEM STIE Wikara diperoleh dari sumber-sumber yang sah, halal, dan tidak mengikat, meliputi:",
+          "1. Dana kemahasiswaan yang dialokasikan secara resmi oleh Rektorat/Ketua STIE Wikara.",
+          "2. Iuran kas pengurus BEM yang nominalnya disepakati bersama dalam Rapat Kerja dan bersifat wajib.",
+          "3. Usaha mandiri organisasi (kewirausahaan/dana usaha) yang sah secara hukum.",
+          "4. Dana hibah, donatur, dan sponsorship yang tidak memiliki afiliasi dengan partai politik, perusahaan ilegal, atau kepentingan yang merugikan independensi BEM."
+        ]
+      },
+      {
+        "id": "pasal-41",
+        "nomor": "Pasal 41",
+        "points": [
+          "Prinsip Pengelolaan Keuangan",
+          "1. Halal: Seluruh dana diperoleh dari sumber yang tidak melanggar hukum agama dan hukum negara.",
+          "2. Transparan: Seluruh arus kas dapat diakses dan diketahui oleh pengurus BEM.",
+          "3. Akuntabel: Setiap pengeluaran wajib disertai bukti transaksi yang sah dan dapat dipertanggungjawabkan.",
+          "4. Efisien dan Efektif: Penggunaan dana difokuskan pada program kerja yang memberikan dampak langsung bagi mahasiswa."
+        ]
+      },
+      {
+        "id": "pasal-42",
+        "nomor": "Pasal 42",
+        "points": [
+          "Kekayaan dan Aset Organisasi",
+          "1. Kekayaan organisasi terdiri dari aset fisik (inventaris kesekretariatan, atribut, dokumen) dan aset intelektual (hak cipta logo, sistem kerja, database mahasiswa).",
+          "2. Seluruh kekayaan dan aset organisasi adalah milik BEM STIE Wikara secara kelembagaan, bukan milik pribadi pengurus.",
+          "3. Pemindahtanganan, penjualan, atau penghancuran aset organisasi tanpa persetujuan Rapat Pleno adalah tindakan ilegal dan dapat dituntut secara hukum."
+        ]
+      },
+      {
+        "id": "pasal-43",
+        "nomor": "Pasal 43",
+        "points": [
+          "Transparansi dan Audit",
+          "1. Tahun buku keuangan BEM STIE Wikara dimulai sejak pelantikan resmi hingga sidang demisioner di MUBES.",
+          "2. Seluruh arus kas (pemasukan dan pengeluaran) wajib dicatat berdasarkan standar akuntansi dasar yang berlaku umum.",
+          "3. Bendahara wajib mempublikasikan laporan keuangan secara transparan kepada seluruh pengurus minimal 1 (satu) kali dalam sebulan.",
+          "4. Laporan keuangan akhir wajib diaudit secara internal sebelum dipresentasikan dan dipertanggungjawabkan secara komprehensif pada MUBES."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-11",
+    "bab": "BAB XI",
+    "title": "PERUBAHAN ANGGARAN DASAR",
+    "pasal": [
+      {
+        "id": "pasal-44",
+        "nomor": "Pasal 44",
+        "points": [
+          "Mekanisme Amandemen",
+          "1. Usulan perubahan (amandemen) Anggaran Dasar hanya dapat dilakukan di dalam forum MUBES atau MUSLUB.",
+          "2. Usulan amandemen harus diajukan secara tertulis, rasional, dan didukung oleh sekurang-kurangnya 1/2 (satu per dua) ditambah 1 dari jumlah Peserta Penuh MUBES.",
+          "3. Perubahan Anggaran Dasar dinyatakan sah apabila disetujui oleh sekurang-kurangnya 1/2 (satu per dua) ditambah 1 dari jumlah peserta MUBES yang hadir pada saat sidang paripurna."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-12",
+    "bab": "BAB XII",
+    "title": "KETENTUAN PERALIHAN",
+    "pasal": [
+      {
+        "id": "pasal-45",
+        "nomor": "Pasal 45",
+        "points": [
+          "1. Peraturan-peraturan organisasi yang ada sebelum AD/ART ini disahkan tetap berlaku sepanjang tidak bertentangan dengan AD/ART ini.",
+          "2. Kepengurusan BEM STIE Wikara yang sedang berjalan pada saat AD/ART ini disahkan, tetap melanjutkan tugasnya hingga masa jabatannya berakhir, dengan menyesuaikan tata kelola berdasarkan AD/ART yang baru ini."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-13",
+    "bab": "BAB XIII",
+    "title": "PEMBUBARAN ORGANISASI",
+    "pasal": [
+      {
+        "id": "pasal-46",
+        "nomor": "Pasal 46",
+        "points": [
+          "Mekanisme Pembubaran",
+          "1. Pembubaran BEM STIE Wikara hanya dapat dilakukan melalui Musyawarah Luar Biasa (MUSLUB) yang diselenggarakan khusus untuk agenda tersebut, atas dasar kondisi force majeure atau krisis institusional yang fatal.",
+          "2. MUSLUB pembubaran harus diusulkan oleh sekurang-kurangnya 1/2 (satu per dua) ditambah 1 dari total mahasiswa aktif STIE Wikara yang dibuktikan dengan tanda tangan fisik/petisi resmi bermaterai.",
+          "3. Keputusan pembubaran dinyatakan sah apabila disetujui oleh sekurang-kurangnya 1/2 (satu per dua) ditambah 1 dari peserta MUSLUB yang hadir dan disahkan secara hukum oleh Ketua STIE Wikara.",
+          "4. Apabila organisasi dibubarkan, seluruh harta kekayaan, aset, dan inventaris organisasi diserahkan sepenuhnya kepada pihak Institusi STIE Wikara."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bab-14",
+    "bab": "BAB XIV",
+    "title": "KETENTUAN PENUTUP",
+    "pasal": [
+      {
+        "id": "pasal-47",
+        "nomor": "Pasal 47",
+        "points": [
+          "1. Hal-hal yang belum diatur dalam Anggaran Dasar ini akan diatur lebih lanjut dalam Anggaran Rumah Tangga (ART) dan peraturan turunan lainnya.",
+          "2. Anggaran Dasar ini berlaku secara konstitusional dan mengikat sejak tanggal, jam, dan menit ditetapkan oleh Presidium Sidang."
+        ]
+      }
+    ]
+  }
+  ],
+  "art": [
+    {
+      "id": "art-bab-1",
+      "bab": "BAB I",
+      "title": "KETENTUAN UMUM",
+      "pasal": [
+        {
+          "id": "art-pasal-1",
+          "nomor": "Pasal 1",
+          "points": [
+            "Sifat dan Kedudukan ART",
+            "1. Anggaran Rumah Tangga (ART) ini merupakan penjabaran teknis, operasional, manajerial, dan pedoman pelaksanaan dari Anggaran Dasar BEM STIE Wikara.",
+            "2. Segala ketentuan di dalam ART bersifat mengikat secara hukum kelembagaan bagi seluruh pengurus dan anggota, serta mutlak tidak boleh bertentangan dengan pasal-pasal di dalam Anggaran Dasar.",
+            "3. Pelanggaran terhadap ART memiliki konsekuensi sanksi administratif hingga pemecatan sesuai dengan mekanisme yang diatur di dalamnya."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-bab-2",
+      "bab": "BAB II",
+      "title": "REKRUTMEN, ADMINISTRASI, DAN MASA PERCOBAAN KEANGGOTAAN",
+      "pasal": [
+        {
+          "id": "art-pasal-2",
+          "nomor": "Pasal 2",
+          "points": [
+            "Prosedur Rekrutmen dan Hak Prerogatif",
+            "1. Pemilihan dan pengangkatan keanggotaan pengurus BEM STIE Wikara (Sekretaris, Bendahara, Menteri, dan Staf Menteri) merupakan Hak Prerogatif mutlak dari Ketua BEM terpilih.",
+            "2. Perekrutan untuk posisi Staf Menteri wajib dilakukan melalui mekanisme Open Recruitment (OPREC) yang diselenggarakan oleh Panitia Seleksi bentukan Ketua BEM, guna menjamin asas keadilan dan transparansi.",
+            "3. Tahapan OPREC wajib dilakukan secara ketat, objektif, dan transparan, yang sekurang-kurangnya meliputi: a. Seleksi Administrasi, b. Uji Kelayakan dan Kepatutan (Fit and Proper Test), c. Focus Group Discussion (FGD).",
+            "4. Calon pengurus yang dinyatakan lulus wajib menandatangani Pakta Integritas di atas materai sebelum dilantik secara resmi."
+          ]
+        },
+        {
+          "id": "art-pasal-3",
+          "nomor": "Pasal 3",
+          "points": [
+            "Masa Percobaan dan Latihan Dasar Kepemimpinan",
+            "1. Pengurus baru yang telah lulus OPREC berstatus sebagai \"Calon Pengurus\" dan wajib mengikuti Latihan Dasar Kepemimpinan Organisasi (LDKO) atau Upgrading yang diselenggarakan oleh BPH.",
+            "2. Calon pengurus menjalani masa percobaan (probation) selama 1 (satu) bulan pertama. Apabila dalam masa percobaan dinilai tidak kompeten atau melanggar etika, Ketua BEM berhak membatalkan pengangkatannya tanpa melalui mekanisme Majelis Etik."
+          ]
+        },
+        {
+          "id": "art-pasal-4",
+          "nomor": "Pasal 4",
+          "points": [
+            "Hilangnya Status Keanggotaan Pengurus",
+            "Status Anggota Aktif (Pengurus) BEM STIE Wikara dinyatakan hilang/gugur secara hukum apabila yang bersangkutan:",
+            "1. Meninggal dunia.",
+            "2. Lulus studi (Yudisium/Wisuda) dari STIE Wikara.",
+            "3. Mengundurkan diri secara tertulis dengan alasan yang logis (sakit permanen, masalah keluarga berat) dan disetujui melalui SK Ketua BEM.",
+            "4. Diberhentikan di tengah periode melalui mekanisme Reshuffle atas dasar evaluasi kinerja (KPI) yang buruk.",
+            "5. Diberhentikan secara tidak hormat (dipecat) karena terbukti melanggar AD/ART melalui mekanisme Majelis Etik.",
+            "6. Mengambil cuti akademik atau dijatuhi sanksi Drop Out (DO) / Skorsing Akademik oleh pihak kampus."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-bab-3",
+      "bab": "BAB III",
+      "title": "STRUKTUR KEPENGURUSAN DAN DESKRIPSI KERJA (JOB DESK)",
+      "pasal": [
+        {
+          "id": "art-pasal-5",
+          "nomor": "Pasal 5",
+          "points": [
+            "Komposisi Kepengurusan",
+            "Struktur internal BEM STIE Wikara secara hierarkis terdiri dari:",
+            "1. Badan Pengurus Harian (BPH), yang meliputi Ketua BEM, Wakil Ketua BEM, Sekretaris, dan Bendahara.",
+            "2. Menteri (sebagai pimpinan kementerian/divisi).",
+            "3. Staf Menteri (sebagai anggota pelaksana di masing-masing kementerian/divisi, termasuk yang didelegasikan sebagai PJ UKM)."
+          ]
+        },
+        {
+          "id": "art-pasal-6",
+          "nomor": "Pasal 6",
+          "points": [
+            "Deskripsi Kerja (Job Deskripsi) BPH",
+            "1. Ketua BEM: a. Memegang kekuasaan eksekutif tertinggi, b. Menetapkan arah kebijakan, c. Mewakili BEM, d. Memiliki andil besar.",
+            "2. Wakil Ketua BEM: a. Mendampingi, b. Menggantikan peran, c. Menjalankan fungsi pengawasan.",
+            "3. Sekretaris: a. Bertanggung jawab penuh atas sistem administrasi, b. Mengelola surat menyurat, c. Menyusun format baku.",
+            "4. Bendahara: a. Bertanggung jawab penuh atas pengelolaan arus kas, b. Menyusun Rencana Anggaran, c. Mengawasi, memverifikasi."
+          ]
+        },
+        {
+          "id": "art-pasal-7",
+          "nomor": "Pasal 7",
+          "points": [
+            "Kementerian, Staf Menteri, dan Delegasi PJ UKM",
+            "1. Kementerian adalah unsur pelaksana teknis program kerja BEM. Jumlah dan nomenklatur Kementerian ditentukan oleh Ketua BEM terpilih sesuai dengan kebutuhan kabinet.",
+            "2. Setiap Kementerian dipimpin oleh seorang Menteri yang bertugas merancang program kerja kementeriannya dan melaporkan progresnya kepada Wakil Ketua BEM.",
+            "3. Tugas Khusus Pembinaan HIMA: Kementerian yang membidangi urusan dalam negeri/kelembagaan bertugas memastikan HIMAMEN dan HIMAKSI menjalankan program kerjanya selaras dengan visi BEM.",
+            "4. Tugas Khusus Pendampingan UKM (Penanggung Jawab / PJ): a. Ketua BEM melalui Menteri terkait wajib menugaskan, b. PJ UKM bertugas memantau aktivitas UKM, c. PJ UKM memiliki wewenang untuk menegur pengurus UKM."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-bab-4",
+      "bab": "BAB IV",
+      "title": "MEKANISME RAPAT DAN FORUM OPERASIONAL (DETAIL & KOMPREHENSIF)",
+      "pasal": [
+        {
+          "id": "art-pasal-8",
+          "nomor": "Pasal 8",
+          "points": [
+            "Hierarki dan Tata Tertib Rapat",
+            "1. Setiap rapat resmi BEM STIE Wikara wajib memiliki Undangan Resmi.",
+            "2. Rapat dinyatakan sah apabila memenuhi kuorum.",
+            "3. Keputusan rapat bersifat mengikat secara moral dan organisatoris."
+          ]
+        },
+        {
+          "id": "art-pasal-9",
+          "nomor": "Pasal 9",
+          "points": [
+            "Rapat Kerja (Raker)",
+            "1. Definisi & Tujuan: Raker adalah forum musyawarah operasional tertinggi.",
+            "2. Waktu Pelaksanaan: Dilaksanakan selambat-lambatnya 1 (satu) bulan.",
+            "3. Peserta: Wajib dihadiri oleh seluruh pengurus BEM.",
+            "4. Output/Hasil: Menghasilkan Ketetapan Raker (TAP Raker)."
+          ]
+        },
+        {
+          "id": "art-pasal-10",
+          "nomor": "Pasal 10",
+          "points": [
+            "Rapat Pimpinan (Rapim)",
+            "1. Definisi & Tujuan: Forum koordinasi tingkat atas untuk membahas kebijakan strategis.",
+            "2. Waktu Pelaksanaan: Dilaksanakan secara rutin minimal 1 (satu) kali dalam sebulan.",
+            "3. Peserta: Hanya dihadiri oleh Badan Pengurus Harian.",
+            "4. Output/Hasil: Menghasilkan draf Surat Keputusan (SK) Ketua BEM."
+          ]
+        },
+        {
+          "id": "art-pasal-11",
+          "nomor": "Pasal 11",
+          "points": [
+            "Rapat Pleno / Evaluasi Kuartal",
+            "1. Definisi & Tujuan: Forum evaluasi menyeluruh terhadap serapan anggaran.",
+            "2. Waktu Pelaksanaan: Diselenggarakan minimal 2 (dua) kali dalam satu periode.",
+            "3. Peserta: Wajib dihadiri oleh seluruh pengurus BEM.",
+            "4. Output/Hasil: a. Laporan pertanggungjawaban, b. Laporan dari PJ UKM, c. Penilaian KPI, d. Revisi timeline."
+          ]
+        },
+        {
+          "id": "art-pasal-12",
+          "nomor": "Pasal 12",
+          "points": [
+            "Rapat Terpimpin",
+            "1. Definisi & Tujuan: Forum koordinasi dan konsolidasi akbar yang melibatkan seluruh Organisasi Mahasiswa.",
+            "2. Waktu Pelaksanaan: Diselenggarakan sekurang-kurangnya 1 (satu) kali dalam satu semester.",
+            "3. Peserta: Dipimpin oleh Ketua BEM.",
+            "4. Output/Hasil: Kesepakatan bersama antar-Ormawa."
+          ]
+        },
+        {
+          "id": "art-pasal-13",
+          "nomor": "Pasal 13",
+          "points": [
+            "Rapat Kementerian / Divisi",
+            "1. Definisi & Tujuan: Rapat internal di tingkat kementerian.",
+            "2. Waktu Pelaksanaan: Dilaksanakan secara fleksibel.",
+            "3. Peserta: Dipimpin oleh Menteri dan dihadiri oleh seluruh Staf.",
+            "4. Output/Hasil: To-do list harian/mingguan staf."
+          ]
+        },
+        {
+          "id": "art-pasal-14",
+          "nomor": "Pasal 14",
+          "points": [
+            "Rapat Kepanitiaan (Organizing Committee)",
+            "1. Definisi & Tujuan: Rapat teknis ad-hoc yang diselenggarakan khusus.",
+            "2. Waktu Pelaksanaan: Dimulai sejak Surat Keputusan (SK) Kepanitiaan diterbitkan.",
+            "3. Peserta: Dihadiri oleh seluruh panitia pelaksana.",
+            "4. Output/Hasil: Fiksasi rundown acara."
+          ]
+        },
+        {
+          "id": "art-pasal-15",
+          "nomor": "Pasal 15",
+          "points": [
+            "Rapat Darurat (Insidental)",
+            "1. Definisi & Tujuan: Rapat yang diselenggarakan secara mendadak untuk merespons kondisi krisis.",
+            "2. Waktu Pelaksanaan: Kapan saja atas instruksi langsung dari Ketua BEM.",
+            "3. Peserta: BPH, Menteri terkait, dan pihak-pihak yang bersinggungan.",
+            "4. Output/Hasil: Keputusan taktis seketika."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-bab-5",
+      "bab": "BAB V",
+      "title": "SOP PROGRAM KERJA DAN KEUANGAN",
+      "pasal": [
+        {
+          "id": "art-pasal-16",
+          "nomor": "Pasal 16",
+          "points": [
+            "Standar Pelaksanaan Program Kerja",
+            "1. Setiap program kerja yang akan dilaksanakan wajib menyusun Terms of Reference (ToR).",
+            "2. Proposal kegiatan wajib disetujui oleh Menteri terkait.",
+            "3. Untuk kegiatan berskala besar, proposal wajib diajukan selambat-lambatnya H-30."
+          ]
+        },
+        {
+          "id": "art-pasal-17",
+          "nomor": "Pasal 17",
+          "points": [
+            "Standar Operasional Prosedur (SOP) Keuangan",
+            "1. Pengajuan Dana: Panitia/Kementerian wajib mengajukan proposal pencairan dana.",
+            "2. Pelaporan (LPJ): Laporan Pertanggungjawaban (LPJ) Keuangan wajib diserahkan.",
+            "3. Validitas Bukti: LPJ Keuangan wajib dilampiri bukti transaksi fisik/digital yang sah.",
+            "4. Sisa Dana: Apabila terdapat sisa dana dari suatu kegiatan, dana tersebut wajib dikembalikan."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-bab-6",
+      "bab": "BAB VI",
+      "title": "ETIKA, DISIPLIN, DAN MEKANISME SANKSI",
+      "pasal": [
+        {
+          "id": "art-pasal-18",
+          "nomor": "Pasal 18",
+          "points": [
+            "Klasifikasi Pelanggaran",
+            "1. Pelanggaran Ringan: Terlambat hadir rapat tanpa alasan logis.",
+            "2. Pelanggaran Sedang: Mangkir dari rapat pleno/raker tanpa keterangan.",
+            "3. Pelanggaran Berat: a. Melakukan tindakan kriminal, b. Melakukan Korupsi."
+          ]
+        },
+        {
+          "id": "art-pasal-19",
+          "nomor": "Pasal 19",
+          "points": [
+            "Mekanisme Pemberian Sanksi",
+            "1. Teguran Lisan: Diberikan oleh atasan langsung.",
+            "2. Surat Peringatan (SP) I: Diberikan secara tertulis melalui SK Ketua BEM.",
+            "3. Surat Peringatan (SP) II: Diberikan jika pelanggaran diulangi dalam masa SP I.",
+            "4. Surat Peringatan (SP) III / Pemecatan: Diberikan jika pengurus tidak menunjukkan perbaikan."
+          ]
+        },
+        {
+          "id": "art-pasal-20",
+          "nomor": "Pasal 20",
+          "points": [
+            "Majelis Etik Organisasi (MEO) dan Hak Membela Diri",
+            "1. Sebelum sanksi SP III (Pemecatan) dijatuhkan, Ketua BEM wajib membentuk Majelis Etik Organisasi (MEO).",
+            "2. Prosedur Pemanggilan: Pengurus yang bermasalah akan diberikan Surat Pemanggilan I.",
+            "3. Sidang Pembelaan: Pengurus yang hadir dalam sidang MEO memiliki Hak Konstitusional.",
+            "4. Keputusan Majelis Etik diambil secara objektif melalui musyawarah mufakat."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-bab-7",
+      "bab": "BAB VII",
+      "title": "RESHUFFLE DAN KEKOSONGAN JABATAN",
+      "pasal": [
+        {
+          "id": "art-pasal-21",
+          "nomor": "Pasal 21",
+          "points": [
+            "Perombakan Kabinet (Reshuffle)",
+            "1. Ketua BEM memiliki andil besar dan Hak Prerogatif untuk melakukan perombakan kabinet (reshuffle).",
+            "2. Reshuffle dapat dilakukan di tengah periode kepengurusan.",
+            "3. Pemberhentian pengurus di tengah periode dilakukan melalui rekomendasi langsung dari Ketua BEM.",
+            "4. Reshuffle diumumkan secara resmi melalui Surat Keputusan (SK) Ketua BEM."
+          ]
+        },
+        {
+          "id": "art-pasal-22",
+          "nomor": "Pasal 22",
+          "points": [
+            "Kekosongan Jabatan Pimpinan",
+            "1. Apabila Ketua BEM mengundurkan diri, meninggal dunia, atau dimakzulkan, maka Wakil Ketua BEM secara otomatis naik menjadi Pelaksana Tugas (Plt) Ketua BEM.",
+            "2. Apabila Ketua dan Wakil Ketua BEM berhalangan tetap secara bersamaan, maka Sekretaris mengambil alih kepemimpinan sementara."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-bab-8",
+      "bab": "BAB VIII",
+      "title": "ATRIBUT ORGANISASI (TEKNIS DAN PENGGUNAAN)",
+      "pasal": [
+        {
+          "id": "art-pasal-23",
+          "nomor": "Pasal 23",
+          "points": [
+            "Atribut Organisasi",
+            "1. Lambang/Logo: [Deskripsikan bentuk dan makna logo BEM STIE Wikara secara rinci di sini].",
+            "2. Kop Surat dan Stempel: Merupakan legalitas tertinggi organisasi.",
+            "3. Pakaian Dinas Harian (PDH) / Jas Almamater: a. Wajib digunakan oleh seluruh pengurus pada saat Rapat Pleno, b. Larangan Mutlak: PDH dan atribut BEM STIE Wikara dilarang keras digunakan untuk menghadiri kampanye partai politik."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-bab-9",
+      "bab": "BAB IX",
+      "title": "AMANDEMEN ART",
+      "pasal": [
+        {
+          "id": "art-pasal-24",
+          "nomor": "Pasal 24",
+          "points": [
+            "Amandemen ART",
+            "Amandemen atau perubahan Anggaran Rumah Tangga ini hanya dapat dilakukan melalui forum MUBES atau MUSLUB, dengan mengikuti tata cara, syarat, dan kuorum yang sama persis dengan prosedur perubahan Anggaran Dasar sebagaimana diatur secara rigid dalam AD Bab XI Pasal 44."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-bab-10",
+      "bab": "BAB X",
+      "title": "KETENTUAN PENUTUP",
+      "pasal": [
+        {
+          "id": "art-pasal-25",
+          "nomor": "Pasal 25",
+          "points": [
+            "Ketentuan Penutup",
+            "1. Segala hal yang belum diatur atau belum cukup rinci diatur dalam Anggaran Rumah Tangga ini akan diatur lebih lanjut dalam Peraturan Organisasi (PO), Standar Operasional Prosedur (SOP) Kementerian, atau Surat Keputusan (SK) Ketua BEM.",
+            "2. Seluruh peraturan turunan (PO, SOP, SK) mutlak tidak boleh bertentangan dengan AD/ART ini maupun Statuta STIE Wikara.",
+            "3. Anggaran Dasar dan Anggaran Rumah Tangga ini berlaku secara konstitusional dan mengikat seluruh mahasiswa STIE Wikara sejak tanggal, jam, dan menit ditetapkan oleh Presidium Sidang."
+          ]
+        }
+      ]
+    }
+  ]
+}

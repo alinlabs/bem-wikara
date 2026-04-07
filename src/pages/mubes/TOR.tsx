@@ -1,0 +1,425 @@
+import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
+import { useLocation } from "react-router-dom";
+import { Search, ChevronDown, ChevronRight, PanelRight, PanelRightClose, X } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { motion, AnimatePresence } from "motion/react";
+import { Trans } from "@/components/ui/Trans";
+import { useTranslateText } from "@/contexts/TranslationContext";
+
+interface Section {
+  id: string;
+  title: string;
+  points: string[];
+}
+
+export function TOR() {
+  const [torData, setTorData] = useState<Section[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [selectedSectionId, setSelectedSectionId] = useState<string | "SEMUA">("SEMUA");
+  const [showSidebar, setShowSidebar] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' ? window.innerWidth < 1024 : false);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setShowSidebar(window.innerWidth >= 1024);
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (isMobile && showSidebar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showSidebar, isMobile]);
+
+  const [highlightInfo, setHighlightInfo] = useState<{ id: string, query: string, active: boolean } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const { t } = useTranslateText();
+
+  useEffect(() => {
+    fetch('/data/tor.json')
+      .then(res => {
+        if (!res.ok) throw new Error("Gagal mengambil data");
+        return res.json();
+      })
+      .then(data => {
+        setTorData(Array.isArray(data) ? data : []);
+        setIsLoading(false);
+      })
+      .catch(err => {
+        console.error("Failed to fetch TOR data:", err);
+        setError("Gagal memuat data TOR. Silakan coba lagi.");
+        setIsLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsSearchOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  let displayData = torData;
+  if (selectedSectionId !== "SEMUA") {
+    displayData = torData.filter(s => s.id === selectedSectionId);
+  }
+
+  // Search logic for popup
+  const searchResults = torData.map(section => {
+    const points = section.points || [];
+    const matchingPoint = points.find(pt => pt && pt.toLowerCase().includes(searchQuery.toLowerCase()));
+    const titleMatches = section.title && section.title.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    if (titleMatches || matchingPoint) {
+      let snippet = matchingPoint || points[0] || "";
+      if (matchingPoint) {
+        const lowerPoint = matchingPoint.toLowerCase();
+        const lowerQuery = searchQuery.toLowerCase();
+        const idx = lowerPoint.indexOf(lowerQuery);
+        const start = Math.max(0, idx - 30);
+        const end = Math.min(matchingPoint.length, idx + lowerQuery.length + 30);
+        snippet = (start > 0 ? "..." : "") + matchingPoint.substring(start, end) + (end < matchingPoint.length ? "..." : "");
+      }
+      return { ...section, snippet };
+    }
+    return null;
+  }).filter(Boolean) as (Section & { snippet: string })[];
+
+  const handleSearchResultClick = (sectionId: string) => {
+    setSelectedSectionId(sectionId);
+    setIsSearchOpen(false);
+    setHighlightInfo({ id: sectionId, query: searchQuery, active: true });
+    
+    setTimeout(() => scrollToSection(sectionId), 100);
+    
+    setTimeout(() => {
+      setHighlightInfo(prev => prev ? { ...prev, active: false } : null);
+    }, 3000);
+  };
+
+  const renderHighlightedText = (text: string, id: string) => {
+    const translatedText = t(text);
+    if (!translatedText) return translatedText;
+    if (!highlightInfo || highlightInfo.id !== id || !highlightInfo.query) return translatedText;
+    
+    const query = highlightInfo.query;
+    const parts = translatedText.split(new RegExp(`(${query})`, 'gi'));
+    return (
+      <>
+        {parts.map((part, i) => 
+          part.toLowerCase() === query.toLowerCase() ? (
+            <span key={i} className={`transition-colors duration-1000 rounded px-1 ${highlightInfo.active ? 'bg-blue-300 dark:bg-blue-600 text-blue-900 dark:text-white' : 'bg-transparent'}`}>
+              {part}
+            </span>
+          ) : (
+            part
+          )
+        )}
+      </>
+    );
+  };
+
+  const highlightMatch = (text: string, query: string) => {
+    if (!query || !text) return text;
+    const parts = text.split(new RegExp(`(${query})`, 'gi'));
+    return (
+      <>
+        {parts.map((part, i) => 
+          part.toLowerCase() === query.toLowerCase() ? (
+            <span key={i} className="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded px-0.5">
+              {part}
+            </span>
+          ) : (
+            part
+          )
+        )}
+      </>
+    );
+  };
+
+  const searchBarUI = (
+    <div className="flex items-center gap-2 md:gap-3 w-full max-w-2xl mx-auto">
+      <div className="relative w-full" ref={searchRef}>
+        <Search className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-slate-400" />
+        <input 
+          type="text" 
+          placeholder={t("Cari bagian atau isi...")}
+          value={searchQuery}
+          onChange={(e) => {
+            setSearchQuery(e.target.value);
+            setIsSearchOpen(true);
+          }}
+          onFocus={() => setIsSearchOpen(true)}
+          className="w-full pl-8 md:pl-12 pr-8 md:pr-10 py-1.5 md:py-3.5 rounded-lg md:rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-shadow shadow-sm dark:text-white text-xs md:text-base"
+        />
+        {searchQuery && (
+          <button 
+            onClick={() => {
+              setSearchQuery("");
+              setIsSearchOpen(false);
+            }}
+            className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+          >
+            <X className="w-3.5 h-3.5 md:w-5 md:h-5" />
+          </button>
+        )}
+        
+        <AnimatePresence>
+          {isSearchOpen && searchQuery && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 overflow-hidden z-50 max-h-[300px] md:max-h-[400px] overflow-y-auto text-left"
+            >
+              {searchResults.length === 0 ? (
+                <div className="p-3 md:p-4 text-center text-xs md:text-sm text-slate-500 dark:text-slate-400">
+                  <Trans>Tidak ada hasil yang ditemukan</Trans>
+                </div>
+              ) : (
+                <ul className="py-1 md:py-2">
+                  {searchResults.map((section) => (
+                    <li key={`search-${section.id}`}>
+                      <button
+                        onClick={() => handleSearchResultClick(section.id)}
+                        className="w-full text-left px-3 py-1.5 md:px-4 md:py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+                      >
+                        <span className="block text-xs md:text-sm font-semibold text-slate-900 dark:text-white">
+                          {highlightMatch(t(section.title), searchQuery)}
+                        </span>
+                        <span className="block text-[10px] md:text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                          {highlightMatch(t(section.snippet), searchQuery)}
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+      <button 
+        onClick={() => setShowSidebar(!showSidebar)} 
+        className="p-1.5 md:p-3.5 rounded-lg md:rounded-2xl bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900 border border-slate-200 dark:border-slate-800 transition-colors flex items-center justify-center shrink-0 shadow-sm" 
+        title={showSidebar ? t("Sembunyikan Navigasi") : t("Tampilkan Navigasi")}
+      >
+        {showSidebar ? <PanelRightClose className="w-4 h-4 md:w-5 md:h-5" /> : <PanelRight className="w-4 h-4 md:w-5 md:h-5" />}
+      </button>
+    </div>
+  );
+
+  const portalTarget = document.getElementById('mubes-search-portal');
+
+  return (
+    <div className="w-full">
+        {portalTarget ? createPortal(searchBarUI, portalTarget) : (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-8 items-center justify-center"
+          >
+            {searchBarUI}
+          </motion.div>
+        )}
+
+        <motion.div
+          key="content-viewer"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className={`grid grid-cols-1 ${showSidebar ? 'lg:grid-cols-4' : 'lg:grid-cols-1'} gap-3 md:gap-8`}
+        >
+          {/* Main Content */}
+          <div className={`${showSidebar ? 'lg:col-span-3' : 'lg:col-span-1 w-full'} space-y-3 md:space-y-8 w-full`}>
+            {isLoading ? (
+              <div className="flex flex-col items-center justify-center py-10 md:py-20 bg-white/50 dark:bg-slate-900/50 rounded-2xl md:rounded-3xl border border-slate-100 dark:border-slate-800">
+                <div className="w-8 h-8 md:w-12 md:h-12 border-3 md:border-4 border-primary-500 border-t-transparent rounded-full animate-spin mb-3 md:mb-4"></div>
+                <p className="text-sm md:text-base text-slate-500 dark:text-slate-400"><Trans>Memuat data TOR...</Trans></p>
+              </div>
+            ) : error ? (
+              <div className="flex flex-col items-center justify-center py-10 md:py-20 bg-white/50 dark:bg-slate-900/50 rounded-2xl md:rounded-3xl border border-slate-100 dark:border-slate-800">
+                <p className="text-sm md:text-base text-red-500 dark:text-red-400 mb-3 md:mb-4"><Trans>{error}</Trans></p>
+                <button onClick={() => window.location.reload()} className="px-4 py-1.5 md:px-6 md:py-2 text-sm md:text-base bg-primary-600 hover:bg-primary-700 text-white rounded-full transition-colors">
+                  <Trans>Coba Lagi</Trans>
+                </button>
+              </div>
+            ) : (
+              displayData.map((section) => (
+                  <Card key={section.id} id={section.id} className="glass-card overflow-hidden group scroll-mt-24 md:scroll-mt-28 rounded-lg md:rounded-2xl">
+                      <CardHeader className="border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 relative p-3 md:p-6">
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary-500" />
+                        <CardTitle className="text-sm md:text-xl text-slate-900 dark:text-white text-center">
+                          {renderHighlightedText(section.title, section.id)}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-3 md:pt-6 p-3 md:p-6 prose prose-slate dark:prose-invert max-w-none">
+                        <div className="text-[10px] md:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-1.5 md:space-y-3">
+                          {(section.points || []).map((point, ptIdx) => {
+                            if (!point) return null;
+                            const match = point.match(/^([0-9]+|[a-z])\.\s+(.*)/);
+                            if (match) {
+                              return (
+                                <div key={ptIdx} className="flex gap-1 md:gap-3 pl-1 md:pl-8">
+                                  <span className="shrink-0 font-medium w-3 md:w-6 text-right">{match[1]}.</span>
+                                  <span className="flex-1 text-justify">{renderHighlightedText(match[2], section.id)}</span>
+                                </div>
+                              );
+                            }
+                            return <p key={ptIdx} className="m-0 text-justify px-1 md:px-8">{renderHighlightedText(point, section.id)}</p>;
+                          })}
+                        </div>
+                      </CardContent>
+                  </Card>
+                  ))
+            )}
+          </div>
+
+          {/* Sidebar Navigation */}
+          {/* Sidebar Navigation */}
+          {isMobile ? createPortal(
+            <AnimatePresence>
+              {showSidebar && (
+                <>
+                  {/* Mobile Overlay */}
+                  <motion.div 
+                    key="mobile-overlay"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={() => setShowSidebar(false)}
+                    className="fixed inset-0 bg-slate-900/40 dark:bg-black/60 backdrop-blur-sm z-[100] lg:hidden"
+                  />
+                  
+                  {/* Sidebar Content */}
+                  <motion.div 
+                    key="mobile-sidebar"
+                    initial={{ x: "100%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x: "100%" }}
+                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                    className="fixed top-0 right-0 bottom-0 w-[280px] bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl shadow-2xl z-[101] lg:hidden flex flex-col border-l border-slate-200/50 dark:border-slate-800/50"
+                  >
+                    <div className="flex items-center justify-between p-6 border-b border-slate-100 dark:border-slate-800/50">
+                      <span className="font-heading font-bold text-xl text-slate-900 dark:text-white tracking-tight">
+                        <Trans>Daftar Isi</Trans>
+                      </span>
+                      <button onClick={() => setShowSidebar(false)} className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors">
+                        <X className="w-5 h-5" />
+                      </button>
+                    </div>
+                    <div className="flex-1 overflow-y-auto p-4 pb-24">
+                      <ul className="text-sm space-y-1">
+                        <li>
+                          <button 
+                            onClick={() => {
+                              setSelectedSectionId("SEMUA");
+                              window.scrollTo({ top: 0, behavior: 'smooth' });
+                              setShowSidebar(false);
+                            }}
+                            className={`w-full flex items-center px-4 py-3 rounded-xl font-medium transition-colors text-left ${selectedSectionId === "SEMUA" ? "text-primary-600 bg-primary-50 dark:bg-slate-800" : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50"}`}
+                          >
+                            <Trans>SEMUA</Trans>
+                          </button>
+                        </li>
+                        {torData.map((section) => (
+                          <li key={section.id}>
+                            <button 
+                              onClick={() => {
+                                setSelectedSectionId(section.id);
+                                scrollToSection(section.id);
+                                setShowSidebar(false);
+                              }}
+                              className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-colors text-left ${selectedSectionId === section.id ? "text-primary-600 bg-primary-50 dark:bg-slate-800 font-semibold" : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 font-medium"}`}
+                            >
+                              <span>{t(section.title)}</span>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
+                </>
+              )}
+            </AnimatePresence>,
+            document.body
+          ) : (
+            <AnimatePresence>
+              {showSidebar && (
+                <motion.div 
+                  key="desktop-sidebar"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="hidden lg:block lg:col-span-1"
+                >
+                  <div className="sticky top-24 md:top-28 lg:h-auto overflow-y-auto lg:overflow-visible">
+                    <Card className="glass-card overflow-hidden lg:max-h-[calc(100vh-150px)] flex flex-col rounded-xl md:rounded-2xl border-0 lg:border">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-sky-400 hidden lg:block" />
+                    <CardHeader className="pb-2 md:pb-3 p-4 md:p-6 border-b border-slate-100 dark:border-slate-800 shrink-0 hidden lg:block">
+                      <CardTitle className="text-base md:text-lg text-slate-900 dark:text-white"><Trans>Daftar Isi</Trans></CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-0 overflow-y-auto flex-1">
+                      <ul className="text-xs md:text-sm">
+                        <li className="border-b border-slate-100 dark:border-slate-800/50">
+                          <button 
+                            onClick={() => {
+                              setSelectedSectionId("SEMUA");
+                              window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
+                            className={`w-full flex items-center px-3 py-3 md:px-4 md:py-3 font-medium transition-colors text-left ${selectedSectionId === "SEMUA" ? "text-primary-600 bg-primary-50 dark:bg-slate-800" : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50"}`}
+                          >
+                            <Trans>SEMUA</Trans>
+                          </button>
+                        </li>
+                        {torData.map((section) => (
+                          <li key={section.id} className="border-b border-slate-100 dark:border-slate-800/50 last:border-0">
+                            <button 
+                              onClick={() => {
+                                setSelectedSectionId(section.id);
+                                scrollToSection(section.id);
+                              }}
+                              className={`w-full flex items-center justify-between px-3 py-3 md:px-4 md:py-3 transition-colors text-left ${selectedSectionId === section.id ? "text-primary-600 bg-primary-50 dark:bg-slate-800 font-semibold" : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 font-medium"}`}
+                            >
+                              <span>{t(section.title)}</span>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          )}
+            </motion.div>
+    </div>
+  );
+}

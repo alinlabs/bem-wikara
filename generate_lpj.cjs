@@ -1,0 +1,539 @@
+const fs = require('fs');
+
+const lpjData = [
+  {
+    id: "1",
+    tanggal: "Berjalan sepanjang periode",
+    kementerian: "Sekretaris Jendral",
+    judul: "Pembuatan Arsip Digital dan Fisik Kegiatan BEM",
+    status: "Sedang Berjalan",
+    fileSize: "-",
+    pdfUrl: "",
+    bab1: {
+      latarBelakang: "Program Pembuatan Arsip Digital dan Fisik Kegiatan BEM dilatarbelakangi oleh urgensi pengelolaan dokumentasi organisasi yang sistematis. Selama ini, banyak data kegiatan yang tercecer atau hilang karena tidak adanya sistem pengarsipan yang terpusat. Hal ini menyulitkan proses evaluasi dan transfer pengetahuan antar periode kepengurusan. Oleh karena itu, diperlukan langkah konkret untuk mengintegrasikan seluruh dokumen kegiatan ke dalam format digital yang aman dan fisik yang terorganisir.",
+      tujuanKegiatan: "1. Mewujudkan tertib administrasi di lingkungan BEM STIE WIKARA.\n2. Menjamin keamanan dan kemudahan akses data kegiatan bagi seluruh pengurus.\n3. Menyediakan basis data yang akurat untuk penyusunan Laporan Pertanggungjawaban akhir periode.",
+      manfaatKegiatan: "1. Memudahkan pengurus dalam mencari referensi kegiatan terdahulu.\n2. Meminimalisir risiko kehilangan dokumen penting akibat kerusakan fisik.\n3. Meningkatkan profesionalitas organisasi dalam hal manajemen informasi."
+    },
+    bab2: {
+      namaKegiatan: "Pembuatan Arsip Digital dan Fisik Kegiatan BEM",
+      tema: "Digitalisasi Administrasi untuk Organisasi yang Adaptif",
+      waktuTempat: "Berjalan sepanjang periode (Maret 2025 - Maret 2026) di Sekretariat BEM STIE WIKARA dan Cloud Storage BEM.",
+      sasaranPeserta: "Seluruh fungsionaris BEM STIE WIKARA dan arsiparis kementerian."
+    },
+    bab3: {
+      pelaksanaan: "1. Tahap Persiapan: Inventarisasi dokumen fisik dari periode sebelumnya dan penyiapan infrastruktur cloud storage (Google Workspace BEM).\n2. Tahap Pelaksanaan: Scan dokumen fisik menjadi PDF, pengelompokan folder berdasarkan kementerian dan jenis kegiatan, serta penomoran surat secara digital.\n3. Tahap Pemeliharaan: Update berkala setiap selesai satu program kerja besar dan backup data setiap akhir bulan."
+    },
+    bab4: {
+      catatanKegiatan: "Program ini berhasil mendigitalisasi lebih dari 500 dokumen penting dari periode sebelumnya dan periode berjalan. Antusiasme pengurus dalam menggunakan sistem baru ini cukup tinggi karena memudahkan koordinasi jarak jauh.",
+      output: "1. Folder Cloud Storage yang terstruktur rapi dengan akses berjenjang.\n2. Lemari arsip fisik yang tersusun berdasarkan kronologi waktu dan jenis surat.\n3. Buku panduan (SOP) pengarsipan untuk periode mendatang."
+    },
+    bab5: {
+      kendala: "1. Keterbatasan kapasitas penyimpanan gratis pada cloud storage.\n2. Beberapa dokumen fisik lama sudah dalam kondisi rusak sehingga sulit di-scan dengan jelas.\n3. Kurangnya disiplin beberapa pengurus dalam mengunggah dokumen tepat waktu setelah kegiatan selesai.",
+      solusi: "1. Melakukan kompresi file PDF untuk menghemat ruang dan mengajukan anggaran untuk langganan cloud storage premium.\n2. Melakukan restorasi manual pada dokumen yang rusak sebelum di-scan dan mengetik ulang dokumen yang sangat penting.\n3. Memberikan sanksi administratif berupa teguran bagi kementerian yang terlambat mengumpulkan arsip lebih dari 7 hari kerja.",
+      perbaikan: "Disarankan untuk berlangganan penyimpanan cloud berbayar agar kapasitas lebih memadai dan meningkatkan frekuensi audit arsip setiap bulan oleh tim Kesekjenan."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Pemasukan Dana Kas BEM", qty: 1, satuan: "Paket", debit: 1500000, kredit: 0, saldo: 1500000 },
+        { keterangan: "Pembelian Ordner/Map Arsip", qty: 15, satuan: "Pcs", debit: 0, kredit: 300000, saldo: 1200000 },
+        { keterangan: "Langganan Google One (100GB) 1 Tahun", qty: 1, satuan: "Tahun", debit: 0, kredit: 269000, saldo: 931000 },
+        { keterangan: "Pembelian Tinta Printer", qty: 4, satuan: "Botol", debit: 0, kredit: 320000, saldo: 611000 },
+        { keterangan: "Kertas HVS A4 80gr", qty: 5, satuan: "Rim", debit: 0, kredit: 250000, saldo: 361000 }
+      ],
+      lampiran: ["Bukti Pembelian ATK", "Invoice Langganan Cloud Storage", "Dokumentasi Lemari Arsip"]
+    },
+    bab7: {
+      penutup: "Demikian Laporan Pertanggungjawaban ini kami buat dengan sebenar-benarnya sebagai bentuk transparansi dan akuntabilitas pelaksanaan program kerja. Semoga sistem kearsipan yang telah dibangun dapat terus dilanjutkan dan disempurnakan oleh kepengurusan selanjutnya."
+    }
+  },
+  {
+    id: "2",
+    tanggal: "Bulan pertama masa jabatan",
+    kementerian: "Sekretaris Jendral",
+    judul: "Penerbitan Buku Agenda BEM",
+    status: "Terlaksana",
+    fileSize: "-",
+    pdfUrl: "",
+    bab1: {
+      latarBelakang: "Buku Agenda BEM merupakan instrumen penting dalam menjaga ritme kerja organisasi. Tanpa adanya panduan jadwal yang jelas, banyak program kerja yang berpotensi tumpang tindih atau bahkan terabaikan. Penerbitan buku agenda ini bertujuan untuk menyelaraskan seluruh rencana kegiatan dari masing-masing kementerian agar tercipta sinergi yang baik selama satu periode kepengurusan.",
+      tujuanKegiatan: "1. Menyediakan dokumen acuan waktu pelaksanaan seluruh program kerja BEM.\n2. Mencegah terjadinya bentrok jadwal antar kegiatan kementerian.\n3. Memudahkan pimpinan BEM dalam melakukan fungsi pengawasan dan evaluasi.",
+      manfaatKegiatan: "1. Terciptanya manajemen waktu organisasi yang lebih efektif dan efisien.\n2. Seluruh pengurus memiliki pemahaman yang sama mengenai timeline organisasi.\n3. Membantu mahasiswa umum mengetahui jadwal kegiatan besar BEM."
+    },
+    bab2: {
+      namaKegiatan: "Penerbitan Buku Agenda BEM STIE WIKARA 2025/2026",
+      tema: "Sinergi Waktu, Harmoni Karya",
+      waktuTempat: "Maret - April 2025 di Sekretariat BEM STIE WIKARA",
+      sasaranPeserta: "Seluruh pengurus BEM STIE WIKARA dan perwakilan Ormawa lain."
+    },
+    bab3: {
+      pelaksanaan: "1. Pengumpulan draf program kerja dari masing-masing kementerian beserta estimasi waktu pelaksanaan.\n2. Rapat sinkronisasi jadwal yang dipimpin oleh Sekretaris Jendral untuk menyusun timeline tahunan.\n3. Proses desain layout buku agenda oleh tim Kominfo.\n4. Pencetakan buku agenda dan pendistribusian kepada seluruh pengurus BEM dan perwakilan Ormawa."
+    },
+    bab4: {
+      catatanKegiatan: "Proses sinkronisasi memakan waktu lebih lama dari perkiraan karena beberapa kementerian belum merampungkan konsep acaranya. Namun, buku agenda berhasil dicetak dan dibagikan pada minggu ketiga bulan April.",
+      output: "1. Tercetaknya 50 eksemplar Buku Agenda BEM fisik.\n2. Tersedianya versi digital (PDF) yang dibagikan melalui grup komunikasi internal.\n3. Kalender kegiatan BEM yang terintegrasi dengan Google Calendar."
+    },
+    bab5: {
+      kendala: "1. Keterlambatan penyerahan draf program kerja dari beberapa kementerian.\n2. Perubahan jadwal akademik dari kampus yang mendadak, sehingga mengharuskan revisi timeline.\n3. Biaya cetak yang mengalami kenaikan dari vendor langganan.",
+      solusi: "1. Memberikan deadline tegas dan melakukan pendampingan bagi kementerian yang kesulitan menyusun jadwal.\n2. Menyediakan ruang fleksibilitas (buffer time) dalam agenda untuk mengantisipasi perubahan jadwal kampus.\n3. Mencari vendor percetakan alternatif yang menawarkan harga lebih kompetitif dengan kualitas setara.",
+      perbaikan: "Ke depannya, proses pengumpulan draf program kerja harus dimulai sejak masa transisi kepengurusan agar buku agenda dapat terbit tepat pada awal masa jabatan."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Pemasukan Dana BEM", qty: 1, satuan: "Paket", debit: 2000000, kredit: 0, saldo: 2000000 },
+        { keterangan: "Biaya Cetak Buku Agenda", qty: 50, satuan: "Eks", debit: 0, kredit: 1250000, saldo: 750000 },
+        { keterangan: "Konsumsi Rapat Sinkronisasi", qty: 2, satuan: "Kali", debit: 0, kredit: 300000, saldo: 450000 },
+        { keterangan: "Biaya Desain (Apresiasi Tim)", qty: 1, satuan: "Paket", debit: 0, kredit: 200000, saldo: 250000 }
+      ],
+      lampiran: ["Nota Percetakan", "Nota Konsumsi Rapat", "Dokumentasi Penyerahan Buku Agenda"]
+    },
+    bab7: {
+      penutup: "Penerbitan Buku Agenda BEM telah terlaksana dengan baik dan diharapkan dapat menjadi kompas penunjuk arah bagi seluruh pengurus dalam menjalankan amanahnya selama satu periode ke depan."
+    }
+  },
+  {
+    id: "3",
+    tanggal: "Secara berkala",
+    kementerian: "Sekretaris Jendral",
+    judul: "Sistem Monitoring Kegiatan",
+    status: "Sedang Berjalan",
+    fileSize: "-",
+    pdfUrl: "",
+    bab1: {
+      latarBelakang: "Pelaksanaan program kerja yang banyak dan beragam membutuhkan pengawasan yang melekat agar tetap berada pada jalur yang direncanakan. Seringkali, evaluasi hanya dilakukan di akhir kegiatan, sehingga perbaikan tidak bisa dilakukan secara real-time. Sistem Monitoring Kegiatan dirancang untuk memantau progres persiapan dan pelaksanaan setiap program kerja secara berkala.",
+      tujuanKegiatan: "1. Memantau sejauh mana persiapan dan pelaksanaan program kerja setiap kementerian.\n2. Mengidentifikasi kendala sejak dini agar dapat segera dicarikan solusi.\n3. Memastikan penyerapan anggaran dan pencapaian target sesuai dengan proposal.",
+      manfaatKegiatan: "1. Meningkatkan persentase keberhasilan program kerja BEM.\n2. Meminimalisir pemborosan anggaran dan waktu.\n3. Menumbuhkan budaya kerja yang disiplin dan bertanggung jawab di kalangan pengurus."
+    },
+    bab2: {
+      namaKegiatan: "Sistem Monitoring dan Evaluasi (MONEV) Kegiatan BEM",
+      tema: "Kawal Kinerja, Wujudkan Visi",
+      waktuTempat: "Secara berkala (Setiap pertengahan bulan) di Ruang Rapat BEM",
+      sasaranPeserta: "Seluruh Menteri dan Ketua Pelaksana Kegiatan."
+    },
+    bab3: {
+      pelaksanaan: "1. Pembuatan instrumen monitoring berupa form ceklis kesiapan acara dan laporan progres mingguan.\n2. Pelaksanaan Rapat Koordinasi (Rakor) bulanan untuk mempresentasikan progres kegiatan.\n3. Kunjungan lapangan (sidak) oleh tim Kesekjenan pada H-7 kegiatan besar untuk memastikan kesiapan teknis.\n4. Pemberian feedback dan rekomendasi perbaikan kepada panitia pelaksana."
+    },
+    bab4: {
+      catatanKegiatan: "Sistem ini terbukti efektif dalam menekan angka keterlambatan pelaksanaan kegiatan. Beberapa potensi kegagalan acara berhasil dicegah melalui intervensi dini dari hasil monitoring.",
+      output: "1. Dokumen laporan progres bulanan dari setiap kementerian.\n2. Matriks capaian program kerja BEM.\n3. Rekomendasi tertulis untuk perbaikan kinerja panitia."
+    },
+    bab5: {
+      kendala: "1. Beberapa panitia merasa terbebani dengan kewajiban mengisi form laporan progres yang dianggap terlalu birokratis.\n2. Kesulitan mencocokkan jadwal rapat evaluasi karena kesibukan akademik masing-masing pengurus.\n3. Kurangnya objektivitas dalam pelaporan progres oleh beberapa panitia (cenderung melaporkan yang baik-baik saja).",
+      solusi: "1. Menyederhanakan format laporan progres menjadi bentuk poin-poin singkat atau menggunakan platform digital (Trello/Notion).\n2. Menetapkan jadwal tetap untuk Rakor bulanan sejak awal periode agar pengurus dapat menyesuaikan jadwalnya.\n3. Melakukan verifikasi silang (cross-check) dengan pihak terkait (misal: vendor, pembicara) untuk memastikan kebenaran laporan.",
+      perbaikan: "Penggunaan project management tools berbasis aplikasi perlu dimaksimalkan agar monitoring dapat dilakukan secara asinkron dan lebih transparan."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Pemasukan Dana BEM", qty: 1, satuan: "Paket", debit: 1000000, kredit: 0, saldo: 1000000 },
+        { keterangan: "Print Form Monitoring", qty: 200, satuan: "Lembar", debit: 0, kredit: 100000, saldo: 900000 },
+        { keterangan: "Konsumsi Rapat Evaluasi Rutin", qty: 6, satuan: "Bulan", debit: 0, kredit: 600000, saldo: 300000 },
+        { keterangan: "ATK (Papan Jalan, Pulpen)", qty: 1, satuan: "Paket", debit: 0, kredit: 150000, saldo: 150000 }
+      ],
+      lampiran: ["Contoh Form Monitoring yang Telah Diisi", "Dokumentasi Rapat Evaluasi"]
+    },
+    bab7: {
+      penutup: "Sistem monitoring yang berjalan dengan baik adalah kunci dari organisasi yang sehat. Kami berharap sistem ini dapat terus dipertahankan dan diadaptasi dengan teknologi terkini pada periode selanjutnya."
+    }
+  },
+  {
+    id: "4",
+    tanggal: "Secara berkala",
+    kementerian: "Sekretaris Jendral",
+    judul: "Monitoring Administrasi Ormawa STIE WIKARA",
+    status: "Sedang Berjalan",
+    fileSize: "-",
+    pdfUrl: "",
+    bab1: {
+      latarBelakang: "BEM sebagai lembaga eksekutif tertinggi di tingkat mahasiswa memiliki fungsi koordinasi terhadap Organisasi Mahasiswa (Ormawa) lainnya seperti UKM dan HIMA. Seringkali ditemukan ketidakseragaman format surat-menyurat, proposal, dan LPJ antar Ormawa yang menyulitkan proses birokrasi ke pihak kampus. Oleh karena itu, diperlukan program monitoring administrasi untuk menstandarisasi dan menertibkan administrasi seluruh Ormawa.",
+      tujuanKegiatan: "1. Menyeragamkan format administrasi (surat, proposal, LPJ) di seluruh Ormawa STIE WIKARA.\n2. Mempercepat proses birokrasi dan persetujuan kegiatan oleh pihak lembaga kampus.\n3. Meningkatkan pemahaman pengurus Ormawa mengenai tata kelola administrasi yang baik.",
+      manfaatKegiatan: "1. Terciptanya sistem administrasi kemahasiswaan yang rapi dan profesional.\n2. Mengurangi tingkat penolakan proposal kegiatan akibat kesalahan format.\n3. Mempererat hubungan koordinasi antara BEM dan Ormawa lainnya."
+    },
+    bab2: {
+      namaKegiatan: "Klinik Administrasi dan Monitoring Ormawa",
+      tema: "Tertib Administrasi, Cerminan Organisasi Berprestasi",
+      waktuTempat: "Secara berkala (Setiap awal bulan) di Sekretariat BEM / Ruang Kelas",
+      sasaranPeserta: "Sekretaris Umum dan Bendahara Umum dari seluruh UKM dan HIMA di STIE WIKARA."
+    },
+    bab3: {
+      pelaksanaan: "1. Sosialisasi Buku Pedoman Administrasi Kemahasiswaan (BPAK) kepada seluruh pengurus Ormawa di awal periode.\n2. Pembukaan 'Klinik Administrasi' setiap hari Jumat sore di Sekretariat BEM untuk melayani konsultasi pembuatan proposal dan LPJ.\n3. Pengecekan berkala terhadap kelengkapan arsip Ormawa setiap akhir semester.\n4. Pemberian 'Administrasi Award' bagi Ormawa dengan tata kelola administrasi terbaik di akhir tahun."
+    },
+    bab4: {
+      catatanKegiatan: "Program ini sangat membantu Ormawa yang baru terbentuk atau yang pengurusnya belum berpengalaman. Tingkat kesalahan format proposal menurun drastis hingga 70% dibandingkan periode sebelumnya.",
+      output: "1. Buku Pedoman Administrasi Kemahasiswaan (BPAK) versi revisi terbaru.\n2. Rekapitulasi status pengajuan proposal dan LPJ seluruh Ormawa.\n3. Peningkatan standar kualitas dokumen resmi kemahasiswaan."
+    },
+    bab5: {
+      kendala: "1. Masih ada beberapa Ormawa yang enggan berkonsultasi dan memilih langsung mengajukan proposal ke kampus, yang berujung pada penolakan.\n2. Kurangnya pemahaman beberapa sekretaris Ormawa mengenai tata bahasa baku (PUEBI) dalam surat resmi.\n3. Jadwal Klinik Administrasi sering berbenturan dengan jadwal kuliah sore tim Kesekjenan BEM.",
+      solusi: "1. Berkoordinasi dengan pihak Kemahasiswaan Kampus agar mensyaratkan 'Cap Verifikasi BEM' sebelum proposal disetujui lembaga.\n2. Mengadakan mini-workshop penulisan surat resmi yang menghadirkan dosen Bahasa Indonesia.\n3. Menerapkan sistem piket bergilir bagi staf Kesekjenan untuk menjaga Klinik Administrasi.",
+      perbaikan: "Perlu dibuatkan sistem pengajuan proposal berbasis web (e-proposal) agar proses verifikasi format dapat dilakukan secara otomatis dan lebih efisien."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Pemasukan Dana BEM", qty: 1, satuan: "Paket", debit: 1500000, kredit: 0, saldo: 1500000 },
+        { keterangan: "Cetak Buku Pedoman Administrasi", qty: 20, satuan: "Buku", debit: 0, kredit: 600000, saldo: 900000 },
+        { keterangan: "Pembuatan Stempel Verifikasi BEM", qty: 2, satuan: "Pcs", debit: 0, kredit: 150000, saldo: 750000 },
+        { keterangan: "Konsumsi Mini Workshop", qty: 30, satuan: "Kotak", debit: 0, kredit: 450000, saldo: 300000 },
+        { keterangan: "Sertifikat Administrasi Award", qty: 3, satuan: "Pcs", debit: 0, kredit: 150000, saldo: 150000 }
+      ],
+      lampiran: ["Daftar Hadir Klinik Administrasi", "Foto Penyerahan Administrasi Award", "Nota Cetak Buku Pedoman"]
+    },
+    bab7: {
+      penutup: "Tertib administrasi bukanlah tujuan akhir, melainkan fondasi bagi pergerakan mahasiswa yang terstruktur. Semoga budaya tertib administrasi ini terus mengakar di seluruh Ormawa STIE WIKARA."
+    }
+  },
+  {
+    id: "5",
+    tanggal: "21 Juni 2025",
+    kementerian: "Bendahara",
+    judul: "Monitoring Laporan Keuangan Ormawa STIE WIKARA",
+    status: "Terlaksana",
+    fileSize: "-",
+    pdfUrl: "",
+    bab1: {
+      latarBelakang: "Transparansi dan akuntabilitas keuangan adalah prinsip mutlak dalam menjalankan roda organisasi. Seringkali, laporan keuangan dari berbagai Ormawa (UKM/HIMA) memiliki format yang berbeda-beda dan kurang melampirkan bukti transaksi yang valid. Hal ini menyulitkan pihak kampus dalam melakukan audit dana kemahasiswaan. Oleh karena itu, Kementerian Keuangan BEM berinisiatif melakukan monitoring dan standardisasi pelaporan keuangan.",
+      tujuanKegiatan: "1. Menstandarisasi format Laporan Keuangan (Buku Kas Umum, Laporan Realisasi Anggaran) bagi seluruh Ormawa.\n2. Memastikan setiap pengeluaran dana kemahasiswaan disertai dengan bukti transaksi (nota/kuitansi) yang sah.\n3. Mencegah terjadinya penyalahgunaan dana organisasi.",
+      manfaatKegiatan: "1. Memudahkan proses audit keuangan oleh pihak lembaga kampus.\n2. Meningkatkan kepercayaan mahasiswa terhadap pengelolaan dana oleh pengurus Ormawa.\n3. Membekali bendahara Ormawa dengan skill akuntansi dasar yang berguna untuk dunia kerja."
+    },
+    bab2: {
+      namaKegiatan: "Audit Internal dan Monitoring Keuangan Ormawa",
+      tema: "Transparansi Keuangan, Kunci Integritas Organisasi",
+      waktuTempat: "21 Juni 2025 di Ruang Aula STIE WIKARA",
+      sasaranPeserta: "Bendahara Umum dan Ketua dari seluruh UKM dan HIMA di STIE WIKARA."
+    },
+    bab3: {
+      pelaksanaan: "1. Sosialisasi Standar Operasional Prosedur (SOP) Keuangan Kemahasiswaan yang baru.\n2. Pelatihan penyusunan Laporan Keuangan menggunakan template Microsoft Excel yang telah disediakan BEM.\n3. Sesi bedah kasus: Menganalisis kesalahan-kesalahan umum dalam pembuatan LPJ Keuangan periode sebelumnya.\n4. Penandatanganan pakta integritas pengelolaan dana oleh seluruh Ketua Ormawa."
+    },
+    bab4: {
+      catatanKegiatan: "Kegiatan berjalan sangat interaktif. Banyak bendahara Ormawa yang baru menyadari pentingnya aspek perpajakan (materai) dalam kuitansi bernominal besar. Template Excel yang dibagikan sangat diapresiasi karena mempermudah perhitungan otomatis.",
+      output: "1. Template Excel Laporan Keuangan Standar Ormawa STIE WIKARA.\n2. Pakta Integritas yang ditandatangani oleh 15 Ketua Ormawa.\n3. Peningkatan pemahaman bendahara Ormawa (diukur dari pre-test dan post-test)."
+    },
+    bab5: {
+      kendala: "1. Beberapa Ormawa tidak membawa contoh LPJ lama mereka sehingga sesi bedah kasus kurang maksimal.\n2. Waktu pelaksanaan yang berdekatan dengan Ujian Tengah Semester (UTS) membuat beberapa peserta datang terlambat.\n3. Kesulitan dalam menjelaskan konsep rekonsiliasi bank kepada bendahara yang bukan dari jurusan Akuntansi.",
+      solusi: "1. Panitia menyediakan contoh LPJ fiktif (dummy) yang mengandung kesalahan umum untuk dibedah bersama.\n2. Memberikan materi susulan berupa video tutorial bagi peserta yang datang terlambat atau tidak hadir.\n3. Menyederhanakan bahasa penyampaian dan memperbanyak simulasi praktik langsung.",
+      perbaikan: "Ke depannya, pelatihan keuangan ini harus dilaksanakan segera setelah pelantikan pengurus baru (awal periode), bukan di pertengahan periode, agar kesalahan pelaporan dapat dicegah sejak awal."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Pemasukan Dana BEM", qty: 1, satuan: "Paket", debit: 2500000, kredit: 0, saldo: 2500000 },
+        { keterangan: "Honor Pembicara (Dosen Akuntansi)", qty: 1, satuan: "Orang", debit: 0, kredit: 500000, saldo: 2000000 },
+        { keterangan: "Konsumsi Peserta dan Panitia", qty: 40, satuan: "Box", debit: 0, kredit: 1000000, saldo: 1000000 },
+        { keterangan: "Sewa Proyektor dan Sound System", qty: 1, satuan: "Set", debit: 0, kredit: 300000, saldo: 700000 },
+        { keterangan: "Cetak Modul Pelatihan & Sertifikat", qty: 40, satuan: "Eks", debit: 0, kredit: 400000, saldo: 300000 },
+        { keterangan: "Biaya Tak Terduga (Lain-lain)", qty: 1, satuan: "Paket", debit: 0, kredit: 100000, saldo: 200000 }
+      ],
+      lampiran: ["Nota Konsumsi", "Kuitansi Honor Pembicara", "Bukti Cetak Modul", "Daftar Hadir Peserta"]
+    },
+    bab7: {
+      penutup: "Pengelolaan keuangan yang baik adalah urat nadi organisasi. Melalui kegiatan ini, kami berharap tidak ada lagi temuan maladministrasi keuangan di lingkungan Ormawa STIE WIKARA. Terima kasih atas partisipasi aktif seluruh bendahara."
+    }
+  },
+  {
+    id: "6",
+    tanggal: "14 Agustus 2025",
+    kementerian: "Kementerian Akademik & Prestasi",
+    judul: "Seminar Pengembangan Soft Skill Mahasiswa",
+    status: "Tidak Terlaksana",
+    fileSize: "-",
+    pdfUrl: "",
+    bab1: {
+      latarBelakang: "Di era dunia kerja yang semakin kompetitif, kemampuan akademik (hard skill) saja tidak cukup untuk menjamin kesuksesan lulusan. Mahasiswa dituntut untuk memiliki keterampilan interpersonal, kepemimpinan, komunikasi, dan problem solving (soft skill) yang mumpuni. Menyadari hal ini, Kementerian Akademik & Prestasi merencanakan sebuah seminar berskala besar untuk membekali mahasiswa dengan soft skill yang relevan dengan kebutuhan industri saat ini.",
+      tujuanKegiatan: "1. Memberikan wawasan kepada mahasiswa mengenai pentingnya soft skill di dunia kerja.\n2. Melatih kemampuan public speaking dan critical thinking mahasiswa.\n3. Menjembatani kesenjangan antara kurikulum akademik kampus dengan ekspektasi industri.",
+      manfaatKegiatan: "1. Mahasiswa menjadi lebih percaya diri dalam menghadapi wawancara kerja.\n2. Meningkatnya daya saing lulusan STIE WIKARA di pasar tenaga kerja.\n3. Terbentuknya karakter mahasiswa yang adaptif dan inovatif."
+    },
+    bab2: {
+      namaKegiatan: "Seminar Nasional: Future-Proof Your Career with Essential Soft Skills",
+      tema: "Beyond Academic Excellence: Mastering the Art of Soft Skills",
+      waktuTempat: "Direncanakan pada 14 Agustus 2025 di Gedung Serbaguna STIE WIKARA",
+      sasaranPeserta: "Mahasiswa STIE WIKARA semester 5 dan 7 (persiapan lulus)."
+    },
+    bab3: {
+      pelaksanaan: "Kegiatan ini dibatalkan pada tahap persiapan akhir (H-7).",
+      alasanTidakTerlaksana: "Pembatalan terpaksa dilakukan karena beberapa faktor krusial yang terjadi secara bersamaan: 1) Pembicara utama (Keynote Speaker) yang merupakan praktisi HRD Nasional membatalkan kehadirannya secara sepihak karena alasan kesehatan mendadak. 2) Tanggal pelaksanaan ternyata berbenturan dengan jadwal Ujian Susulan dan Remedial tingkat kampus yang baru saja dirilis oleh pihak akademik, sehingga target peserta (mahasiswa) tidak dapat hadir. 3) Sponsor utama menarik pendanaannya karena perubahan jadwal yang tidak menentu."
+    },
+    bab4: {
+      catatanKegiatan: "Panitia telah melakukan persiapan hingga 70%, termasuk desain publikasi, pemesanan gedung, dan penyebaran undangan. Namun, force majeure dan miskomunikasi jadwal akademik membuat acara ini tidak rasional untuk dilanjutkan.",
+      output: "Tidak ada output kegiatan utama yang dihasilkan. Namun, panitia menghasilkan dokumen mitigasi risiko (Risk Management Plan) sebagai pembelajaran untuk kepanitiaan selanjutnya."
+    },
+    bab5: {
+      kendala: "1. Pembatalan sepihak dari pembicara utama tanpa adanya pembicara pengganti yang sepadan.\n2. Kurangnya koordinasi awal dengan pihak rektorat terkait kalender akademik yang dinamis.\n3. Ketergantungan pendanaan pada satu sponsor utama (single point of failure).",
+      solusi: "1. Panitia segera menghubungi seluruh peserta terdaftar untuk menginformasikan pembatalan dan mengembalikan uang tiket (refund) 100%.\n2. Mengirimkan surat permohonan maaf resmi kepada pihak kampus dan vendor terkait.\n3. Mengalihkan fokus panitia untuk merancang program pengganti dalam bentuk workshop skala kecil.",
+      perbaikan: "1. Wajib memiliki 'Plan B' untuk pembicara utama (minimal 2 opsi cadangan).\n2. Melibatkan pihak akademik kampus sejak tahap perencanaan tanggal acara.\n3. Diversifikasi sumber pendanaan agar tidak bergantung pada satu sponsor."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Pemasukan Dana Awal BEM", qty: 1, satuan: "Paket", debit: 1000000, kredit: 0, saldo: 1000000 },
+        { keterangan: "DP Sewa Gedung (Hangus)", qty: 1, satuan: "Paket", debit: 0, kredit: 500000, saldo: 500000 },
+        { keterangan: "Cetak Proposal dan Surat Menyurat", qty: 10, satuan: "Eks", debit: 0, kredit: 150000, saldo: 350000 },
+        { keterangan: "Pengembalian Sisa Dana ke Kas BEM", qty: 1, satuan: "Paket", debit: 0, kredit: 350000, saldo: 0 }
+      ],
+      lampiran: ["Bukti Transfer DP Gedung", "Nota Cetak Proposal", "Bukti Pengembalian Dana Kas"]
+    },
+    bab7: {
+      penutup: "Meskipun kegiatan ini gagal dilaksanakan, proses persiapan yang telah dilalui memberikan pelajaran berharga bagi tim Kementerian Akademik & Prestasi mengenai manajemen krisis dan pentingnya mitigasi risiko. Kami memohon maaf yang sebesar-besarnya kepada seluruh pihak yang telah menantikan acara ini."
+    }
+  },
+  {
+    id: "8",
+    tanggal: "Tergantung lomba/beasiswa",
+    kementerian: "Kementerian Akademik & Prestasi",
+    judul: "Wikara Champions: Inkubasi Prestasi dan Akademik Berkelanjutan",
+    status: "Sedang Berjalan",
+    fileSize: "-",
+    pdfUrl: "",
+    bab1: {
+      latarBelakang: "Potensi mahasiswa STIE WIKARA dalam bidang akademik maupun non-akademik (seperti debat, business plan, dan PKM) sebenarnya sangat besar. Namun, minimnya pendampingan intensif dan informasi mengenai kompetisi membuat potensi tersebut tidak tersalurkan menjadi prestasi. Program 'Wikara Champions' hadir sebagai wadah inkubasi untuk menjaring, membina, dan memberangkatkan delegasi mahasiswa ke berbagai kompetisi tingkat nasional maupun internasional.",
+      tujuanKegiatan: "1. Meningkatkan jumlah perolehan medali/penghargaan mahasiswa STIE WIKARA di tingkat nasional.\n2. Membangun ekosistem kompetitif yang sehat di lingkungan kampus.\n3. Memfasilitasi mahasiswa dalam mencari dan meraih beasiswa bergengsi.",
+      manfaatKegiatan: "1. Mengangkat citra dan akreditasi institusi STIE WIKARA.\n2. Mahasiswa mendapatkan pengalaman berharga, relasi luas, dan portofolio yang kuat.\n3. Terciptanya regenerasi mahasiswa berprestasi dari tahun ke tahun."
+    },
+    bab2: {
+      namaKegiatan: "Wikara Champions: Inkubasi Prestasi Mahasiswa",
+      tema: "Dari Potensi Menjadi Prestasi, Untuk WIKARA Menginspirasi",
+      waktuTempat: "Sepanjang periode kepengurusan, bertempat di Ruang Inkubasi BEM dan Online (Zoom).",
+      sasaranPeserta: "Mahasiswa STIE WIKARA yang memiliki minat mengikuti perlombaan (Business Plan, Debat, Esai, PKM) dan pemburu beasiswa."
+    },
+    bab3: {
+      pelaksanaan: "1. Talent Scouting: Membuka pendaftaran terbuka dan jemput bola ke mahasiswa ber-IPK tinggi di awal semester.\n2. Mentoring Session: Mengadakan kelas bimbingan rutin setiap akhir pekan dengan mengundang dosen pakar dan alumni berprestasi.\n3. Simulasi Kompetisi: Mengadakan lomba internal (mock-up competition) sebelum delegasi dikirim ke lomba sebenarnya.\n4. Info Corner: Mempublikasikan info lomba dan beasiswa terbaru setiap minggu melalui Instagram BEM."
+    },
+    bab4: {
+      catatanKegiatan: "Hingga kuartal ketiga kepengurusan, program ini telah berhasil mengirimkan 5 delegasi ke kompetisi Business Plan tingkat nasional, di mana 2 tim berhasil meraih Juara 2 dan Harapan 1. Antusiasme mahasiswa untuk bergabung dalam grup inkubasi sangat tinggi (mencapai 150 anggota aktif).",
+      output: "1. Database mahasiswa berprestasi STIE WIKARA.\n2. Raihan 2 trofi tingkat nasional.\n3. Modul panduan penulisan Program Kreativitas Mahasiswa (PKM)."
+    },
+    bab5: {
+      kendala: "1. Kurangnya dana delegasi dari pihak kampus untuk membiayai akomodasi lomba di luar kota.\n2. Kesulitan menyamakan jadwal mentoring antara mahasiswa dan dosen pembimbing.\n3. Beberapa mahasiswa mengalami demotivasi ketika gagal di tahap seleksi awal kompetisi.",
+      solusi: "1. BEM secara mandiri mencari sponsorship dari perusahaan lokal dan melakukan penggalangan dana (danus) untuk menutupi kekurangan biaya delegasi.\n2. Menerapkan sistem mentoring hybrid (online dan offline) serta merekam sesi untuk dipelajari ulang.\n3. Mengadakan sesi konseling motivasi (peer-support) bagi delegasi yang belum berhasil.",
+      perbaikan: "Perlu dibentuk 'Alumni Champions Network' agar alumni yang pernah juara dapat secara sukarela menjadi mentor tetap bagi adik tingkatnya."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Subsidi Dana Kampus untuk Delegasi", qty: 1, satuan: "Paket", debit: 5000000, kredit: 0, saldo: 5000000 },
+        { keterangan: "Hasil Danusan (Jualan Merchandise)", qty: 1, satuan: "Paket", debit: 2500000, kredit: 0, saldo: 7500000 },
+        { keterangan: "Biaya Pendaftaran Lomba (5 Tim)", qty: 5, satuan: "Tim", debit: 0, kredit: 1500000, saldo: 6000000 },
+        { keterangan: "Tiket Kereta & Penginapan Delegasi (Lomba di Bandung)", qty: 3, satuan: "Orang", debit: 0, kredit: 3500000, saldo: 2500000 },
+        { keterangan: "Konsumsi Sesi Mentoring (3 Bulan)", qty: 12, satuan: "Pertemuan", debit: 0, kredit: 1200000, saldo: 1300000 },
+        { keterangan: "Cetak Modul PKM", qty: 20, satuan: "Buku", debit: 0, kredit: 500000, saldo: 800000 }
+      ],
+      lampiran: ["Bukti Transfer Pendaftaran Lomba", "Tiket Perjalanan Delegasi", "Dokumentasi Penyerahan Trofi"]
+    },
+    bab7: {
+      penutup: "Program Wikara Champions membuktikan bahwa dengan pembinaan yang tepat, mahasiswa STIE WIKARA mampu bersaing di kancah nasional. Dukungan finansial dan moral dari institusi sangat diharapkan untuk memperluas jangkauan program ini di masa depan."
+    }
+  },
+  {
+    id: "9",
+    tanggal: "Setiap ada bencana alam",
+    kementerian: "Kementerian Sosial & Aspirasi Mahasiswa",
+    judul: "Aksi Kemanusiaan (Bersatu Untuk Kemanusiaan)",
+    status: "Sedang Berjalan",
+    fileSize: "-",
+    pdfUrl: "",
+    bab1: {
+      latarBelakang: "Indonesia merupakan negara yang rawan terhadap bencana alam. Sebagai agen perubahan (agent of change) dan makhluk sosial, mahasiswa memiliki tanggung jawab moral untuk hadir dan membantu masyarakat yang terdampak musibah. Program 'Aksi Kemanusiaan' ini merupakan bentuk respon cepat tanggap BEM STIE WIKARA dalam menggalang solidaritas dan menyalurkan bantuan kepada korban bencana alam, baik di tingkat lokal maupun nasional.",
+      tujuanKegiatan: "1. Meringankan beban penderitaan masyarakat yang terdampak bencana alam.\n2. Menumbuhkan rasa empati, kepedulian sosial, dan semangat gotong royong di kalangan mahasiswa.\n3. Mewujudkan implementasi Tri Dharma Perguruan Tinggi, khususnya di bidang pengabdian masyarakat.",
+      manfaatKegiatan: "1. Korban bencana mendapatkan bantuan materiil dan moril yang dibutuhkan secara cepat.\n2. Meningkatkan citra positif STIE WIKARA sebagai institusi yang peduli terhadap isu sosial.\n3. Mempererat tali persaudaraan antar mahasiswa melalui aksi penggalangan dana bersama."
+    },
+    bab2: {
+      namaKegiatan: "Aksi Kemanusiaan: WIKARA Peduli Bencana",
+      tema: "Satu Langkah Kecil, Sejuta Harapan untuk Mereka",
+      waktuTempat: "Insidental (Setiap terjadi bencana alam berskala besar). Penggalangan dana dilakukan di lingkungan kampus, lampu merah sekitar kampus, dan secara online.",
+      sasaranPeserta: "Seluruh civitas akademika STIE WIKARA dan masyarakat umum (sebagai donatur). Korban bencana alam (sebagai penerima manfaat)."
+    },
+    bab3: {
+      pelaksanaan: "1. Tahap Respon Cepat: Rapat darurat kementerian sosial maksimal 1x24 jam setelah bencana terjadi untuk menentukan target donasi dan metode penggalangan.\n2. Tahap Penggalangan: Open donasi melalui transfer bank/e-wallet, penyebaran pamflet di media sosial, dan aksi turun ke jalan (galang dana di perempatan jalan) selama 3-5 hari.\n3. Tahap Penyaluran: Pembelian barang kebutuhan pokok (logistik, obat-obatan, pakaian layak pakai) dan penyaluran langsung ke lokasi bencana (jika memungkinkan) atau melalui lembaga amil zakat/NGO terpercaya (seperti ACT/PMI)."
+    },
+    bab4: {
+      catatanKegiatan: "Selama periode ini, BEM telah merespon 2 kejadian bencana besar (Banjir Bandang di daerah X dan Gempa Bumi di daerah Y). Antusiasme mahasiswa untuk menjadi relawan penggalang dana sangat tinggi. Transparansi update donasi yang dipublikasikan setiap hari di Instagram BEM meningkatkan kepercayaan donatur.",
+      output: "1. Terkumpulnya dana donasi sebesar Rp 15.450.000,- dari dua kali aksi.\n2. Tersalurnya 50 paket sembako, 20 dus air mineral, dan 5 karung pakaian layak pakai.\n3. Laporan transparansi donasi yang dipublikasikan secara luas."
+    },
+    bab5: {
+      kendala: "1. Perizinan turun ke jalan untuk galang dana terkadang dipersulit oleh pihak berwajib setempat.\n2. Kesulitan dalam mendistribusikan barang bantuan secara langsung ke daerah pelosok yang akses jalannya terputus akibat bencana.\n3. Manajemen penyortiran pakaian layak pakai yang memakan waktu lama karena banyak donatur yang menyumbangkan pakaian yang sudah tidak layak.",
+      solusi: "1. Mengurus surat izin resmi dari kampus dan kepolisian setempat sebelum melakukan aksi turun ke jalan, serta memperbanyak porsi penggalangan dana digital.\n2. Bekerja sama dengan Badan Penanggulangan Bencana Daerah (BPBD) atau relawan lokal untuk proses distribusi akhir.\n3. Membuat standar operasional (SOP) donasi barang, dengan menegaskan hanya menerima pakaian baru atau uang tunai untuk efisiensi.",
+      perbaikan: "Ke depannya, BEM perlu membentuk 'Tim Relawan Tanggap Bencana' yang terlatih secara khusus (bekerja sama dengan PMI/Basarnas) agar bantuan yang diberikan tidak hanya berupa logistik, tetapi juga tenaga evakuasi atau trauma healing."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Total Donasi Terkumpul (Banjir & Gempa)", qty: 1, satuan: "Paket", debit: 15450000, kredit: 0, saldo: 15450000 },
+        { keterangan: "Pembelian Paket Sembako (Beras, Minyak, Mie)", qty: 50, satuan: "Paket", debit: 0, kredit: 5000000, saldo: 10450000 },
+        { keterangan: "Pembelian Obat-obatan dan P3K", qty: 1, satuan: "Paket", debit: 0, kredit: 2000000, saldo: 8450000 },
+        { keterangan: "Pembelian Selimut dan Terpal", qty: 30, satuan: "Pcs", debit: 0, kredit: 3000000, saldo: 5450000 },
+        { keterangan: "Biaya Operasional Relawan (Transport & Konsumsi)", qty: 1, satuan: "Paket", debit: 0, kredit: 1450000, saldo: 4000000 },
+        { keterangan: "Disalurkan via Transfer ke Rekening PMI Pusat", qty: 1, satuan: "Transaksi", debit: 0, kredit: 4000000, saldo: 0 }
+      ],
+      lampiran: ["Rekening Koran Penerimaan Donasi", "Nota Pembelian Logistik", "Bukti Transfer ke PMI", "Dokumentasi Penyaluran Bantuan"]
+    },
+    bab7: {
+      penutup: "Aksi kemanusiaan ini adalah bukti nyata bahwa mahasiswa STIE WIKARA tidak hanya cerdas secara intelektual, tetapi juga memiliki kepekaan sosial yang tinggi. Kami mengucapkan terima kasih yang tak terhingga kepada seluruh donatur dan relawan. Semoga bantuan yang disalurkan dapat menjadi pelita harapan bagi saudara-saudara kita yang tertimpa musibah."
+    }
+  },
+  {
+    id: "10",
+    tanggal: "28 Agustus 2025",
+    kementerian: "Kementerian Sosial & Aspirasi Mahasiswa",
+    judul: "Seminar Mental Health",
+    status: "Tidak Terlaksana",
+    fileSize: "-",
+    pdfUrl: "",
+    bab1: {
+      latarBelakang: "Isu kesehatan mental di kalangan mahasiswa (seperti stres akademik, kecemasan, dan depresi) semakin meningkat dan seringkali diabaikan karena stigma negatif di masyarakat. Banyak mahasiswa yang merasa tertekan namun tidak tahu ke mana harus mencari bantuan. Berangkat dari keresahan tersebut, Kementerian Sosial & Aspirasi Mahasiswa merancang 'Seminar Mental Health' untuk memberikan edukasi dan ruang aman bagi mahasiswa untuk membahas kesehatan mental.",
+      tujuanKegiatan: "1. Meningkatkan kesadaran (awareness) mahasiswa STIE WIKARA tentang pentingnya menjaga kesehatan mental.\n2. Menghapus stigma negatif terhadap individu yang mengalami masalah psikologis.\n3. Memberikan pemahaman dasar mengenai pertolongan pertama psikologis (Psychological First Aid) dan cara mengelola stres.",
+      manfaatKegiatan: "1. Mahasiswa mampu mengenali tanda-tanda kelelahan mental pada diri sendiri dan orang lain.\n2. Terciptanya lingkungan kampus yang lebih suportif dan inklusif.\n3. Mendorong mahasiswa untuk tidak ragu mencari bantuan profesional jika membutuhkan."
+    },
+    bab2: {
+      namaKegiatan: "Seminar Mental Health: It's Okay Not To Be Okay",
+      tema: "Merangkul Diri, Menjaga Kewarasan di Tengah Tekanan Akademik",
+      waktuTempat: "Direncanakan pada 28 Agustus 2025 di Auditorium STIE WIKARA",
+      sasaranPeserta: "Seluruh mahasiswa STIE WIKARA, khususnya mahasiswa tingkat akhir yang sedang menyusun skripsi."
+    },
+    bab3: {
+      pelaksanaan: "Kegiatan ini dibatalkan pada H-14 sebelum acara.",
+      alasanTidakTerlaksana: "Pembatalan disebabkan oleh beberapa faktor: 1) Psikolog klinis yang telah bersedia menjadi narasumber utama mendadak harus dinas ke luar kota untuk penanganan kasus darurat dan tidak dapat digantikan. 2) Kurangnya koordinasi internal panitia dalam mencari narasumber cadangan yang memiliki lisensi resmi. 3) Minimnya pendaftar (hanya 15 orang dari target 100 orang) karena waktu pelaksanaan bertepatan dengan minggu tenang sebelum Ujian Akhir Semester (UAS), sehingga mahasiswa lebih fokus belajar."
+    },
+    bab4: {
+      catatanKegiatan: "Persiapan yang telah dilakukan meliputi pembuatan Term of Reference (TOR), desain poster, dan penyebaran form pendaftaran. Namun, karena kendala narasumber dan timing yang kurang tepat, acara terpaksa dibatalkan untuk menghindari pelaksanaan yang tidak maksimal.",
+      output: "Tidak ada output seminar yang dihasilkan. Sebagai gantinya, panitia mengalihkan kampanye kesehatan mental melalui infografis di media sosial BEM."
+    },
+    bab5: {
+      kendala: "1. Kesulitan mencari psikolog klinis yang bersedia menjadi pembicara dengan honorarium yang sesuai dengan anggaran BEM (terbatas).\n2. Pemilihan tanggal acara yang sangat tidak strategis (minggu tenang UAS).\n3. Stigma bahwa mengikuti seminar mental health berarti 'mengakui diri sedang sakit jiwa', yang membuat mahasiswa enggan mendaftar secara terbuka.",
+      solusi: "1. Mengembalikan dana pendaftaran (jika ada) kepada peserta yang sudah mendaftar.\n2. Mengganti format acara dari seminar besar menjadi kampanye digital (Mental Health Awareness Week) di Instagram BEM berupa postingan edukatif.\n3. Melakukan evaluasi penjadwalan program kerja agar tidak berbenturan dengan kalender akademik krusial.",
+      perbaikan: "1. Ke depannya, acara terkait isu sensitif seperti ini sebaiknya dikemas dalam bentuk Focus Group Discussion (FGD) tertutup atau konseling sebaya (peer counseling) yang lebih privat, bukan seminar terbuka.\n2. Menjalin kerja sama (MoU) dengan biro psikologi lokal atau fakultas psikologi dari universitas terdekat jauh hari sebelum acara."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Pemasukan Dana Awal BEM", qty: 1, satuan: "Paket", debit: 500000, kredit: 0, saldo: 500000 },
+        { keterangan: "Cetak Poster Publikasi (Ditempel di Mading)", qty: 5, satuan: "Lembar", debit: 0, kredit: 50000, saldo: 450000 },
+        { keterangan: "Pengembalian Sisa Dana ke Kas BEM", qty: 1, satuan: "Paket", debit: 0, kredit: 450000, saldo: 0 }
+      ],
+      lampiran: ["Nota Cetak Poster", "Bukti Pengembalian Dana Kas"]
+    },
+    bab7: {
+      penutup: "Meskipun Seminar Mental Health ini tidak terlaksana, urgensi mengenai isu kesehatan mental mahasiswa tetap menjadi prioritas kami. Kegagalan ini menjadi bahan evaluasi penting terkait manajemen waktu, pemilihan narasumber, dan pendekatan psikologis dalam menyelenggarakan acara bertema sensitif."
+    }
+  }
+];
+
+const templates = {
+  "Terlaksana": (item) => ({
+    ...item,
+    bab1: {
+      latarBelakang: "Program " + item.judul + " dirancang sebagai respon terhadap dinamika kebutuhan mahasiswa STIE WIKARA saat ini. Melalui observasi dan penjaringan aspirasi, ditemukan bahwa kegiatan ini sangat krusial untuk mendukung pengembangan soft skill dan hard skill mahasiswa di luar jam perkuliahan formal.",
+      tujuanKegiatan: "1. Mengoptimalkan potensi dan bakat mahasiswa dalam bidang " + item.kementerian + ".\n2. Membangun relasi dan sinergi antar civitas akademika.\n3. Memberikan wadah ekspresi yang positif dan konstruktif.",
+      manfaatKegiatan: "1. Mahasiswa mendapatkan pengalaman praktis yang relevan.\n2. Meningkatkan indeks prestasi non-akademik kampus.\n3. Terciptanya lingkungan kampus yang dinamis dan interaktif."
+    },
+    bab2: {
+      namaKegiatan: item.judul,
+      tema: "Aksi Nyata untuk WIKARA Berjaya",
+      waktuTempat: item.tanggal + " di lingkungan STIE WIKARA dan sekitarnya.",
+      sasaranPeserta: "Seluruh mahasiswa aktif STIE WIKARA dan pihak eksternal terkait."
+    },
+    bab3: {
+      pelaksanaan: "1. Persiapan: Rapat pembentukan panitia, penyusunan proposal, dan pencarian dana (sponsorship/danusan).\n2. Pelaksanaan: Acara inti berjalan sesuai rundown dengan partisipasi aktif dari peserta. Terdapat sesi interaktif dan evaluasi langsung.\n3. Pasca Acara: Pembubaran panitia dan penyusunan LPJ."
+    },
+    bab4: {
+      catatanKegiatan: "Secara keseluruhan acara berjalan sukses melampaui target peserta awal. Antusiasme sangat tinggi dibuktikan dengan feedback positif pada kuesioner pasca-acara.",
+      output: "1. Terlaksananya seluruh rangkaian acara dengan tingkat kepuasan peserta 85%.\n2. Dokumentasi kegiatan berupa foto dan video after-movie.\n3. Terjalinnya kemitraan baru dengan 3 sponsor lokal."
+    },
+    bab5: {
+      kendala: "1. Persiapan logistik yang mepet karena dana cair terlambat.\n2. Cuaca yang kurang mendukung pada hari H (hujan deras) menyebabkan acara sedikit tertunda.\n3. Kurangnya personil panitia di divisi keamanan.",
+      solusi: "1. Menggunakan dana talangan dari kas internal panitia sementara waktu.\n2. Memindahkan sebagian acara outdoor ke area semi-indoor.\n3. Meminta bantuan dari pengurus BEM kementerian lain untuk mem-backup divisi keamanan.",
+      perbaikan: "Pengajuan proposal dana harus dilakukan minimal H-30 acara. Perlu adanya manajemen risiko cuaca (pawang hujan/tenda cadangan) untuk acara outdoor."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Dana Kemahasiswaan Kampus", qty: 1, satuan: "Paket", debit: 3000000, kredit: 0, saldo: 3000000 },
+        { keterangan: "Dana Sponsorship", qty: 1, satuan: "Paket", debit: 1500000, kredit: 0, saldo: 4500000 },
+        { keterangan: "Sewa Perlengkapan (Tenda, Sound)", qty: 1, satuan: "Set", debit: 0, kredit: 1500000, saldo: 3000000 },
+        { keterangan: "Konsumsi (Peserta & Panitia)", qty: 100, satuan: "Box", debit: 0, kredit: 2000000, saldo: 1000000 },
+        { keterangan: "Publikasi, Dekorasi, dan ATK", qty: 1, satuan: "Paket", debit: 0, kredit: 800000, saldo: 200000 },
+        { keterangan: "Biaya Kebersihan & Keamanan", qty: 1, satuan: "Paket", debit: 0, kredit: 200000, saldo: 0 }
+      ],
+      lampiran: ["Nota Sewa Alat", "Nota Konsumsi", "Kuitansi Sponsorship", "Laporan Keuangan Rinci (Excel)"]
+    },
+    bab7: {
+      penutup: "Keberhasilan acara ini adalah hasil kerja keras seluruh elemen panitia dan dukungan pihak kampus. Semoga kegiatan serupa dapat terus ditingkatkan kualitasnya di masa mendatang."
+    }
+  }),
+  "Sedang Berjalan": (item) => ({
+    ...item,
+    bab1: {
+      latarBelakang: "Program " + item.judul + " merupakan program kerja jangka panjang yang membutuhkan konsistensi. Program ini diinisiasi untuk menjawab tantangan berkelanjutan di lingkungan STIE WIKARA yang tidak bisa diselesaikan hanya dengan satu kali acara (one-time event).",
+      tujuanKegiatan: "1. Membangun sistem dan kebiasaan baru yang positif di kalangan mahasiswa.\n2. Memberikan pendampingan dan pelayanan yang berkelanjutan.\n3. Mencapai target indikator kinerja utama (IKU) kementerian.",
+      manfaatKegiatan: "1. Dampak program dapat dirasakan secara merata sepanjang tahun.\n2. Memungkinkan adanya perbaikan (continuous improvement) di tengah jalan.\n3. Menjaga eksistensi dan kehadiran BEM di tengah mahasiswa setiap saat."
+    },
+    bab2: {
+      namaKegiatan: item.judul,
+      tema: "Konsistensi Membawa Perubahan",
+      waktuTempat: item.tanggal + " secara hybrid (Online dan Offline di Kampus STIE WIKARA).",
+      sasaranPeserta: "Mahasiswa STIE WIKARA secara umum dan target spesifik sesuai kementerian."
+    },
+    bab3: {
+      pelaksanaan: "1. Perencanaan: Menyusun timeline bulanan dan Key Performance Indicator (KPI).\n2. Eksekusi Rutin: Melaksanakan kegiatan sesuai jadwal (mingguan/bulanan).\n3. Monitoring: Rapat evaluasi internal kementerian setiap akhir bulan untuk meninjau progres."
+    },
+    bab4: {
+      catatanKegiatan: "Hingga saat laporan ini disusun, program telah berjalan mencapai 60% dari total target tahunan. Partisipasi mahasiswa menunjukkan tren positif meskipun fluktuatif di masa ujian.",
+      output: "1. Laporan progres bulanan.\n2. Terbentuknya komunitas/grup diskusi aktif terkait program.\n3. Peningkatan engagement di platform digital BEM."
+    },
+    bab5: {
+      kendala: "1. Menurunnya semangat (burnout) panitia/pengurus karena program berjalan sangat panjang.\n2. Kesulitan menjaga antusiasme peserta agar tetap konsisten mengikuti program.\n3. Bentrok jadwal dengan kegiatan insidental kampus lainnya.",
+      solusi: "1. Mengadakan sesi bonding internal kementerian (makan bersama/refreshing) untuk menjaga moral tim.\n2. Memberikan reward/gamifikasi kecil-kecilan bagi peserta yang paling aktif.\n3. Fleksibilitas jadwal; menggeser pelaksanaan program jika ada acara kampus yang lebih masif.",
+      perbaikan: "Perlu adanya rotasi penanggung jawab (Person in Charge/PIC) setiap bulan agar beban kerja merata dan mencegah kebosanan pengurus."
+    },
+    bab6: {
+      laporanKeuangan: [
+        { keterangan: "Alokasi Dana BEM (Tahap 1)", qty: 1, satuan: "Paket", debit: 2000000, kredit: 0, saldo: 2000000 },
+        { keterangan: "Biaya Operasional Rutin (Bulan 1-3)", qty: 3, satuan: "Bulan", debit: 0, kredit: 900000, saldo: 1100000 },
+        { keterangan: "Langganan Platform Digital (Zoom/Canva)", qty: 3, satuan: "Bulan", debit: 0, kredit: 450000, saldo: 650000 },
+        { keterangan: "Pembelian Reward/Merchandise Peserta", qty: 10, satuan: "Pcs", debit: 0, kredit: 300000, saldo: 350000 }
+      ],
+      lampiran: ["Rekapitulasi Pengeluaran Bulanan", "Nota Pembelian Merchandise"]
+    },
+    bab7: {
+      penutup: "Karena program ini masih berstatus 'Sedang Berjalan', laporan ini bersifat sementara (progress report). Evaluasi komprehensif akan disajikan pada LPJ Akhir Tahun Kepengurusan."
+    }
+  }),
+  "Tidak Terlaksana": (item) => ({
+    ...item,
+    bab1: {
+      latarBelakang: "Program " + item.judul + " awalnya dirancang dengan harapan dapat memberikan kontribusi signifikan bagi mahasiswa. Ide ini muncul dari rapat kerja awal tahun sebagai bentuk inovasi kementerian.",
+      tujuanKegiatan: "1. Merealisasikan inovasi program kerja baru.\n2. Memenuhi kebutuhan spesifik mahasiswa di bidang " + item.kementerian + ".\n3. Memperluas jangkauan program BEM.",
+      manfaatKegiatan: "Diharapkan dapat memberikan pengalaman baru dan meningkatkan soft skill mahasiswa STIE WIKARA."
+    },
+    bab2: {
+      namaKegiatan: item.judul,
+      tema: "Inovasi yang Tertunda",
+      waktuTempat: "Direncanakan pada " + item.tanggal + " di STIE WIKARA",
+      sasaranPeserta: "Mahasiswa STIE WIKARA"
+    },
+    bab3: {
+      pelaksanaan: "Kegiatan ini tidak memasuki tahap pelaksanaan (batal di tahap perencanaan/persiapan).",
+      alasanTidakTerlaksana: "Terdapat kendala struktural dan situasional yang tidak dapat dihindari. Di antaranya adalah pemotongan anggaran kemahasiswaan secara tiba-tiba dari pihak rektorat, bentroknya jadwal dengan program kerja prioritas (Mubes/Pemira), dan kurangnya sumber daya manusia (SDM) di internal kementerian yang mumpuni untuk mengeksekusi konsep acara yang terlalu ambisius."
+    },
+    bab4: {
+      catatanKegiatan: "Pembatalan diputuskan melalui Rapat Pleno BEM setelah menimbang rasio manfaat dan risiko kegagalan jika dipaksakan berjalan dengan kondisi yang tidak ideal.",
+      output: "Tidak ada output fisik/kegiatan. Menghasilkan dokumen kajian kelayakan program (feasibility study) yang menyimpulkan program ini belum layak dieksekusi tahun ini."
+    },
+    bab5: {
+      kendala: "1. Pemotongan anggaran operasional BEM hingga 40%.\n2. Konsep acara yang terlalu idealis namun tidak realistis dengan kapasitas panitia.\n3. Kurangnya dukungan dari pihak eksternal (calon sponsor dan mitra kerja).",
+      solusi: "1. Mengalihkan sisa dana yang ada untuk memaksimalkan program kerja prioritas lainnya yang lebih berdampak.\n2. Mengarsipkan konsep acara ini (blue print) untuk diwariskan ke kepengurusan tahun depan dengan catatan perbaikan.\n3. Melakukan permohonan maaf secara internal kepada anggota kementerian yang telah menyusun konsep.",
+      perbaikan: "Pada Rapat Kerja (Raker) periode mendatang, penyusunan program kerja harus menggunakan metode SMART (Specific, Measurable, Achievable, Relevant, Time-bound) agar tidak ada lagi program yang 'gugur sebelum berkembang' karena tidak realistis."
+    },
+    bab6: {
+      laporanKeuangan: [],
+      lampiran: []
+    },
+    bab7: {
+      penutup: "Keputusan untuk tidak melaksanakan program ini adalah langkah pahit namun rasional demi menyelamatkan stabilitas organisasi secara keseluruhan. Kami merekomendasikan agar konsep ini dikaji ulang secara matang oleh kabinet selanjutnya."
+    }
+  })
+};
+
+const existingData = JSON.parse(fs.readFileSync('public/data/lpj.json', 'utf8'));
+
+const newData = existingData.map(item => {
+  // If it's one of the first 10 items we manually defined, use that.
+  const manualItem = lpjData.find(m => m.id === item.id);
+  if (manualItem) return manualItem;
+
+  // Otherwise, use the template based on status
+  const templateFn = templates[item.status] || templates["Terlaksana"];
+  return templateFn(item);
+});
+
+fs.writeFileSync('public/data/lpj.json', JSON.stringify(newData, null, 2));
+console.log('Successfully updated lpj.json with rich content.');

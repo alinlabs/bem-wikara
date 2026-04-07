@@ -1,0 +1,7 @@
+{
+  "name": "bem wikara",
+  "description": "",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

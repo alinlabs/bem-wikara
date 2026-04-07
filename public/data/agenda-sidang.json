@@ -1,0 +1,77 @@
+[
+  {
+    "date": "Jumat, 10 April 2026",
+    "title": "Sidang Pembukaan & Tata Tertib",
+    "focus": "Legitimasi formal acara, pengesahan aturan main (Tata Tertib), dan serah terima kekuasaan persidangan dari panitia kepada Pimpinan Sidang Tetap (Presidium).",
+    "schedule": [
+      { "waktu": "09.30 - 10.15", "acara": "Registrasi & Pengecekan Mandat Peserta", "keterangan": "Peserta menyerahkan Surat Mandat. Pemisahan duduk antara Peserta Penuh & Peninjau." },
+      { "waktu": "10.15 - 10.30", "acara": "Pengkondisian Ruang Sidang & Safety Briefing", "keterangan": "Pintu ditutup sementara. Pembacaan tata tertib ruang sidang dasar oleh MC." },
+      { "waktu": "10.30 - 10.35", "acara": "CEREMONY PEMBUKAAN MUBES: Pembukaan Acara", "keterangan": "MC membuka acara pembukaan secara resmi dan membacakan susunan acara." },
+      { "waktu": "10.35 - 10.45", "acara": "Menyanyikan Lagu Indonesia Raya & Mars Mahasiswa", "keterangan": "Peserta diwajibkan berdiri dengan sikap sempurna." },
+      { "waktu": "10.45 - 10.55", "acara": "Sambutan Ketua Pelaksana MUBES", "keterangan": "Laporan singkat mengenai persiapan dan jumlah peserta MUBES." },
+      { "waktu": "10.55 - 11.05", "acara": "Sambutan Presiden Mahasiswa (Ketua BEM)", "keterangan": "Pengantar purna tugas dan harapan untuk persidangan." },
+      { "waktu": "11.05 - 11.15", "acara": "Sambutan Ketua STIE Wikara & Pembukaan Resmi", "keterangan": "Sambutan institusi sekaligus membuka MUBES secara resmi (simbolis pemukulan gong/palu)." },
+      { "waktu": "11.15 - 11.30", "acara": "Penyerahan Palu Sidang kepada Presidium Sementara (SC)", "keterangan": "MC mundur, kendali forum diambil alih sepenuhnya oleh Presidium Sementara." },
+      { "waktu": "11.30 - 12.00", "acara": "SIDANG PLENO I (Sesi 1) Pembahasan Agenda Sidang & Tata Tertib MUBES", "keterangan": "Merupakan sesi krusial. Perdebatan terkait batas waktu bicara, mekanisme skorsing, dan hak suara." },
+      { "waktu": "12.00 - 13.00", "acara": "Istirahat, Salat, Makan (ISHOMA)", "keterangan": "Ruang sidang disterilkan." },
+      { "waktu": "13.00 - 15.30", "acara": "SIDANG PLENO I (Sesi 2) Lanjutan Pembahasan Tata Tertib", "keterangan": "Ketukan Palu Pengesahan Konsideran Tata Tertib MUBES STIE Wikara." },
+      { "waktu": "15.30 - 16.00", "acara": "Jeda Salat Asar & Coffee Break", "keterangan": "Sekaligus masa persiapan serah terima berkas konsideran." },
+      { "waktu": "16.00 - 17.30", "acara": "Pemilihan Pimpinan Sidang Tetap (Presidium I, II, III)", "keterangan": "Pendelegasian calon presidium dari peserta penuh. Jika terjadi kebuntuan, dilakukan lobbying." },
+      { "waktu": "17.30 - 18.30", "acara": "Istirahat, Salat, Makan (ISHOMA)", "keterangan": "Pemulihan energi peserta dan panitia." },
+      { "waktu": "18.30 - 19.30", "acara": "Serah Terima Palu Sidang ke Presidium Tetap", "keterangan": "Pengetukan palu pengalihan wewenang ke Presidium Tetap." },
+      { "waktu": "19.30 - 20.00", "acara": "Evaluasi Hari ke-1 & Penutupan Sidang", "keterangan": "Sidang di-skorsing hingga esok hari. Forum dibubarkan tepat pukul 20.00." }
+    ]
+  },
+  {
+    "date": "Sabtu, 11 April 2026",
+    "title": "Sidang Laporan Pertanggungjawaban",
+    "focus": "Evaluasi menyeluruh terhadap kinerja BEM selama 1 periode. Pendekatan analitis, rasional, dan berlandaskan data. Diantisipasi sebagai hari dengan tensi paling tinggi.",
+    "schedule": [
+      { "waktu": "09.30 - 10.00", "acara": "Presensi & Pengkondisian Kuorum", "keterangan": "Sidang hanya bisa dimulai jika peserta memenuhi ½ n + 1 (sesuai AD Pasal 39)." },
+      { "waktu": "10.00 - 10.15", "acara": "Pencabutan Skorsing & Pembukaan Sidang Pleno II", "keterangan": "Pembacaan konsideran agenda Pleno II." },
+      { "waktu": "10.15 - 12.00", "acara": "SIDANG PLENO II (Sesi 1) Pemaparan Laporan Pertanggungjawaban (LPJ) BEM", "keterangan": "Pemaparan difokuskan pada angka capaian KPI, serapan anggaran, dan progres per kementerian." },
+      { "waktu": "12.00 - 13.00", "acara": "ISHOMA & Waktu Salat Jumat", "keterangan": "Mengakomodasi ibadah Salat Jumat bagi peserta muslim dan makan siang." },
+      { "waktu": "13.00 - 15.30", "acara": "Sesi Pandangan Umum & Tanya Jawab (Termin I)", "keterangan": "Peserta (HIMAMEN, HIMAKSI, UKM) memberikan kritik, pertanyaan, dan evaluasi. Alokasi waktu bicara dibatasi ketat." },
+      { "waktu": "15.30 - 16.00", "acara": "Jeda Salat Asar & Evaluasi Internal Delegasi", "keterangan": "Digunakan untuk konsolidasi setiap fraksi/HIMA menentukan sikap akhir terhadap LPJ." },
+      { "waktu": "16.00 - 17.30", "acara": "SIDANG PLENO II (Sesi 2) Lanjutan Tanya Jawab & Jawaban dari Pengurus BEM", "keterangan": "BEM memberikan klarifikasi atas setiap poin yang dipertanyakan oleh forum." },
+      { "waktu": "17.30 - 18.30", "acara": "Istirahat, Salat, Makan (ISHOMA)", "keterangan": "Jeda untuk meredakan tensi persidangan." },
+      { "waktu": "18.30 - 19.30", "acara": "Penetapan Status LPJ (Diterima / Diterima dengan Catatan / Ditolak)", "keterangan": "Menggunakan asas musyawarah mufakat. Jika mentok, dilakukan Lobbying atau Voting." },
+      { "waktu": "19.30 - 20.00", "acara": "Pembacaan Konsideran Demisioner & Skorsing Sidang", "keterangan": "Pengurus BEM dinyatakan Demisioner. Sidang di-skorsing tepat pukul 20.00." }
+    ]
+  },
+  {
+    "date": "Senin, 13 April 2026",
+    "title": "Sidang AD/ART & GBHO",
+    "focus": "Amandemen konstitusi dan Garis Besar Haluan Organisasi. Membutuhkan ketelitian pembacaan teks hukum dan konsentrasi intelektual yang tinggi.",
+    "schedule": [
+      { "waktu": "09.30 - 10.00", "acara": "Presensi Kuorum & Pencabutan Skorsing", "keterangan": "Presidium Tetap membuka Sidang Pleno III." },
+      { "waktu": "10.00 - 12.00", "acara": "SIDANG PLENO III (Sesi 1) Pembahasan Draf Anggaran Dasar (AD)", "keterangan": "Pembacaan dan bedah teks per pasal. Menitikberatkan pada status keanggotaan, asas, dan hierarki." },
+      { "waktu": "12.00 - 13.00", "acara": "Istirahat, Salat, Makan (ISHOMA)", "keterangan": "Pemulihan energi. Panitia merapikan draf amandemen sementara." },
+      { "waktu": "13.00 - 15.30", "acara": "SIDANG PLENO III (Sesi 2) Pembahasan Anggaran Rumah Tangga (ART)", "keterangan": "Dinamika tertinggi terjadi saat membahas job desk menteri, kriteria reshuffle, dan kode etik/sanksi." },
+      { "waktu": "15.30 - 16.00", "acara": "Jeda Salat Asar & Coffee Break", "keterangan": "Menjaga konsentrasi peserta dari kelelahan membaca teks konstitusi." },
+      { "waktu": "16.00 - 17.30", "acara": "Lanjutan Pembahasan ART & Waktu Lobbying", "keterangan": "Jika ada pasal krusial yang diperdebatkan tanpa ujung, Presidium melakukan Lobbying ketua-ketua delegasi." },
+      { "waktu": "17.30 - 18.30", "acara": "Istirahat, Salat, Makan (ISHOMA)", "keterangan": "Jeda istirahat malam." },
+      { "waktu": "18.30 - 19.30", "acara": "Pembahasan Garis Besar Haluan Organisasi (GBHO)", "keterangan": "Menetapkan arah kerja BEM selama 1 periode ke depan (indikator program utama)." },
+      { "waktu": "19.30 - 20.00", "acara": "Pengesahan AD/ART & GBHO", "keterangan": "Pengetukan palu sidang paripurna Pleno III. Sidang di-skorsing untuk hari terakhir tepat pukul 20.00." }
+    ]
+  },
+  {
+    "date": "Selasa, 14 April 2026",
+    "title": "Sidang Penutup / Paripurna",
+    "focus": "Penyelesaian administrasi legal organisasi, penetapan ketetapan akhir (TAP MUBES), rekonsiliasi seluruh peserta, dan selebrasi penutupan acara.",
+    "schedule": [
+      { "waktu": "09.30 - 10.00", "acara": "Pengkondisian Peserta & Pencabutan Skorsing Terakhir", "keterangan": "Peserta diharapkan hadir dalam keadaan kondusif dan berpakaian formal rapi (Jas Almamater/PDH)." },
+      { "waktu": "10.00 - 12.00", "acara": "SIDANG PLENO IV (Paripurna) Pembacaan Seluruh Ketetapan (TAP) MUBES BEM STIE Wikara", "keterangan": "Pembacaan ulang poin-poin keputusan final secara garis besar untuk memastikan tidak ada kesalahan redaksional." },
+      { "waktu": "12.00 - 13.00", "acara": "Istirahat, Salat, Makan (ISHOMA)", "keterangan": "Jeda istirahat siang." },
+      { "waktu": "13.00 - 14.30", "acara": "Penandatanganan Berita Acara & Konsideran MUBES", "keterangan": "Penandatanganan dokumen legal oleh Presidium Sidang I, II, III dan perwakilan saksi penuh (HIMAMEN, HIMAKSI)." },
+      { "waktu": "14.30 - 15.30", "acara": "Penyerahan Berkas MUBES kepada Pihak Institusi / DPM", "keterangan": "Berkas AD/ART dan GBHO yang telah disahkan diserahkan untuk proses penerbitan SK Ketua STIE Wikara." },
+      { "waktu": "15.30 - 16.00", "acara": "Jeda Salat Asar", "keterangan": "Persiapan penutupan sidang." },
+      { "waktu": "16.00 - 17.00", "acara": "Penutupan Sidang Resmi (Ketukan Palu Paripurna)", "keterangan": "Presidium Tetap secara resmi membubarkan MUBES BEM STIE Wikara Periode 2025/2026." },
+      { "waktu": "17.00 - 17.05", "acara": "CEREMONY PENUTUPAN: Pembukaan Sesi Penutup", "keterangan": "MC memandu jalannya prosesi penutupan acara." },
+      { "waktu": "17.05 - 17.20", "acara": "Sambutan Penutup", "keterangan": "Mengembalikan marwah Silih Asah Silih Asih Silih Asuh. Seluruh perselisihan di ruang sidang ditinggalkan." },
+      { "waktu": "17.20 - 17.30", "acara": "Doa Penutup", "keterangan": "Doa bersama sebagai wujud syukur atas kelancaran acara." },
+      { "waktu": "17.30 - 18.30", "acara": "Istirahat, Salat, Makan (ISHOMA)", "keterangan": "Jeda istirahat malam." },
+      { "waktu": "18.30 - 20.00", "acara": "Foto Bersama, Salaman Rekonsiliasi & Sayonara", "keterangan": "Acara selesai tepat pukul 20.00. Panitia melakukan operasi semut (membersihkan ruang sidang) dan evaluasi kepanitiaan." }
+    ]
+  }
+]
